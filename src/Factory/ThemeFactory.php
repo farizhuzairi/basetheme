@@ -1,14 +1,14 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Factory;
+namespace Hascha\BaseTheme\Factory;
 
-use HaschaMedia\BaseTheme\Services\ThemeService;
-use HaschaMedia\BaseTheme\Traits\Factory\UseTheme;
-use HaschaMedia\BaseTheme\Traits\Factory\UseLayout;
-use HaschaMedia\BaseTheme\Contracts\Theme\Themeable;
-use HaschaMedia\BaseTheme\Contracts\Layout\Layoutable;
-use HaschaMedia\BaseTheme\Contracts\Element\Elementable;
-use HaschaMedia\BaseTheme\Exceptions\BaseThemeException;
+use Hascha\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Traits\Factory\UseTheme;
+use Hascha\BaseTheme\Traits\Factory\UseLayout;
+use Hascha\BaseTheme\Contracts\Theme\Themeable;
+use Hascha\BaseTheme\Contracts\Layout\Layoutable;
+use Hascha\BaseTheme\Contracts\Element\Elementable;
+use Hascha\BaseTheme\Exceptions\BaseThemeException;
 
 final class ThemeFactory
 {
@@ -20,7 +20,7 @@ final class ThemeFactory
     private static $factory;
 
     /**
-     * @var \HaschaMedia\BaseTheme\Services\ThemeService
+     * @var \Hascha\BaseTheme\Services\ThemeService
      */
     private static $service;
 
@@ -41,7 +41,7 @@ final class ThemeFactory
     /**
      * Use factory
      * 
-     * @return \HaschaMedia\BaseTheme\Builder\Factory\ThemeFactory
+     * @return \Hascha\BaseTheme\Builder\Factory\ThemeFactory
      */
     public static function make()
     {

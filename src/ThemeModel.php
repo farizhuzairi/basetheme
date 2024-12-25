@@ -1,11 +1,11 @@
 <?php
 
-namespace HaschaMedia\BaseTheme;
+namespace Hascha\BaseTheme;
 
 use Closure;
 use Illuminate\Contracts\View\View;
-use HaschaMedia\BaseTheme\Traits\ThemeModelable;
-use HaschaMedia\BaseTheme\Exceptions\BaseThemeException;
+use Hascha\BaseTheme\Traits\ThemeModelable;
+use Hascha\BaseTheme\Exceptions\BaseThemeException;
 
 abstract class ThemeModel
 {

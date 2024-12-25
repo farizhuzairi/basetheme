@@ -1,12 +1,12 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseLiveComponent\Forms;
+namespace Hascha\BaseTheme\View\BaseLiveComponent\Forms;
 
 use Illuminate\Http\Request;
-use HaschaMedia\BaseTheme\Livewire\LiveForm\LiveableForm;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
-use HaschaMedia\BaseTheme\Builder\Component\BaseLiveComponent;
-use HaschaMedia\BaseTheme\Livewire\LiveForm\LiveableFormComponent;
+use Hascha\BaseTheme\Livewire\LiveForm\LiveableForm;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Builder\Component\BaseLiveComponent;
+use Hascha\BaseTheme\Livewire\LiveForm\LiveableFormComponent;
 
 class Base extends BaseLiveComponent implements Componentable, LiveableFormComponent
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Traits\Has;
+namespace Hascha\BaseTheme\Traits\Has;
 
 trait HasGlobalDataComposer
 {

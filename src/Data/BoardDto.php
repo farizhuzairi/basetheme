@@ -1,8 +1,8 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Data;
+namespace Hascha\BaseTheme\Data;
 
-use HaschaMedia\BaseTheme\Traits\Dto\HasWirePoll;
+use Hascha\BaseTheme\Traits\Dto\HasWirePoll;
 
 abstract class BoardDto
 {

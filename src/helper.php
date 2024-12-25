@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Str;
-use HaschaMedia\BaseTheme\Services\ThemeConfig;
-use HaschaMedia\BaseTheme\Contracts\Explainable;
-use HaschaMedia\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Services\ThemeConfig;
+use Hascha\BaseTheme\Contracts\Explainable;
+use Hascha\BaseTheme\Services\ThemeService;
 
 if(! function_exists('defineError')){
 

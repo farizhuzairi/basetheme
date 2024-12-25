@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Livewire\Synth;
+namespace Hascha\BaseTheme\Livewire\Synth;
 
-use HaschaMedia\BaseTheme\Livewire\Synth\Synthable;
-use HaschaMedia\BaseTheme\Exceptions\BaseThemeException;
+use Hascha\BaseTheme\Livewire\Synth\Synthable;
+use Hascha\BaseTheme\Exceptions\BaseThemeException;
 
 trait UseAdditonalSynth
 {

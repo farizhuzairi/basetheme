@@ -1,13 +1,13 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Contracts;
+namespace Hascha\BaseTheme\Contracts;
 
-use HaschaMedia\BaseTheme\Contracts\Layouting;
+use Hascha\BaseTheme\Contracts\Layouting;
 
 interface Htmlable
 {
     /**
-     * @param \HaschaMedia\BaseTheme\Contracts\Layouting $builder
+     * @param \Hascha\BaseTheme\Contracts\Layouting $builder
      * @return void
      */
     public function accept(Layouting $builder);

@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Components\Elements;
+namespace Hascha\BaseTheme\Components\Elements;
 
-use HaschaMedia\BaseTheme\Contracts\Htmlable;
-use HaschaMedia\BaseTheme\Builder\Element\BaseElement;
-use HaschaMedia\BaseTheme\Contracts\Element\Elementable;
+use Hascha\BaseTheme\Contracts\Htmlable;
+use Hascha\BaseTheme\Builder\Element\BaseElement;
+use Hascha\BaseTheme\Contracts\Element\Elementable;
 
 class Body extends BaseElement implements Htmlable, Elementable
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Livewire\Synth;
+namespace Hascha\BaseTheme\Livewire\Synth;
 
 interface Synthable
 {}

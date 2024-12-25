@@ -1,11 +1,11 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Traits;
+namespace Hascha\BaseTheme\Traits;
 
 use Closure;
-use HaschaMedia\BaseTheme\Traits\Nameable;
-use HaschaMedia\BaseTheme\Factory\ThemeFactory;
-use HaschaMedia\BaseTheme\Traits\Has\HasGlobalDataComposer;
+use Hascha\BaseTheme\Traits\Nameable;
+use Hascha\BaseTheme\Factory\ThemeFactory;
+use Hascha\BaseTheme\Traits\Has\HasGlobalDataComposer;
 
 trait ThemeModelFactory
 {
@@ -14,7 +14,7 @@ trait ThemeModelFactory
     /**
      * Html layout (base template)
      * 
-     * @var \HaschaMedia\BaseTheme\Builder\Factory\ThemeFactory
+     * @var \Hascha\BaseTheme\Builder\Factory\ThemeFactory
      */
     protected $factory;
 

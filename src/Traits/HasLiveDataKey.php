@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Traits;
+namespace Hascha\BaseTheme\Traits;
 
 trait HasLiveDataKey
 {

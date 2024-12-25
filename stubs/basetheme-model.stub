@@ -2,7 +2,7 @@
 
 namespace App\Themes;
 
-use HaschaMedia\BaseTheme\ThemeModel;
+use Hascha\BaseTheme\ThemeModel;
 
 class {{ className }} extends ThemeModel
 {

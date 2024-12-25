@@ -1,8 +1,8 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Data\Wireables;
+namespace Hascha\BaseTheme\Data\Wireables;
 
-use HaschaMedia\BaseTheme\Livewire\BaseWireable;
+use Hascha\BaseTheme\Livewire\BaseWireable;
 
 class SideMenuList extends BaseWireable
 {

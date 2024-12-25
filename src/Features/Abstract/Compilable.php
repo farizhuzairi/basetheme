@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Features\Abstract;
+namespace Hascha\BaseTheme\Features\Abstract;
 
 interface Compilable
 {}

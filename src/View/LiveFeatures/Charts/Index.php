@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\LiveFeatures\Charts;
+namespace Hascha\BaseTheme\View\LiveFeatures\Charts;
 
-use HaschaMedia\BaseTheme\Traits\Explained;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
-use HaschaMedia\BaseTheme\Builder\Component\BaseLiveComponent;
+use Hascha\BaseTheme\Traits\Explained;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Builder\Component\BaseLiveComponent;
 
 class Index extends BaseLiveComponent implements Componentable
 {

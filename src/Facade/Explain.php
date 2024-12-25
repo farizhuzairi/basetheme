@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Facade;
+namespace Hascha\BaseTheme\Facade;
 
 use Illuminate\Support\Facades\Facade;
-use HaschaMedia\BaseTheme\Contracts\Explainable;
+use Hascha\BaseTheme\Contracts\Explainable;
 
 class Explain extends Facade
 {

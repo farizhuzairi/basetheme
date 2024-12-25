@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseComponent\Panels;
+namespace Hascha\BaseTheme\View\BaseComponent\Panels;
 
-use HaschaMedia\BaseTheme\Builder\Component\BaseComponent;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Builder\Component\BaseComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
 
 class Body extends BaseComponent implements Componentable
 {

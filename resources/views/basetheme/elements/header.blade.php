@@ -6,7 +6,7 @@ id="topNav"
 :class="basetheme()->btheme('bg-top-bar-style')"
 >
 @php
-foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Content::class, [], 'topHeader') as $_key => $i) {
+foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Content::class, [], 'topHeader') as $_key => $i) {
     echo e($i);
 }
 @endphp
@@ -20,13 +20,13 @@ foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Content::class, []
             @if($theme === 'panel')
             <a href="{{ config('app.url') }}" class="font-title font-medium"><livewire:brand.logo/></a>
             @php
-            foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Content::class, ['navMenu'], 'header') as $_key => $i) {
+            foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Content::class, ['navMenu'], 'header') as $_key => $i) {
                 echo e($i);
             }
             @endphp
             <div class="hidden md:flex md:flex-wrap gap-2 items-center">
                 @php
-                foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Content::class, ['headline', 'tagables'], 'header') as $_key => $i) {
+                foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Content::class, ['headline', 'tagables'], 'header') as $_key => $i) {
                     echo e($i);
                 }
                 @endphp

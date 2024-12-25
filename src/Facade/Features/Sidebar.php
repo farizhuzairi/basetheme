@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Facade\Features;
+namespace Hascha\BaseTheme\Facade\Features;
 
 use Illuminate\Support\Facades\Facade;
-use HaschaMedia\BaseTheme\Features\SidebarService;
+use Hascha\BaseTheme\Features\SidebarService;
 
 class Sidebar extends Facade
 {

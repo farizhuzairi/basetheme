@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Services;
+namespace Hascha\BaseTheme\Services;
 
 use Hascamp\BaseCrypt\Encryption\BaseCrypt;
 use Illuminate\Support\Facades\Config as LaravelConfig;

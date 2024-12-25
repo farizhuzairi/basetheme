@@ -1,8 +1,8 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Traits\Factory;
+namespace Hascha\BaseTheme\Traits\Factory;
 
-use HaschaMedia\BaseTheme\Exceptions\BaseThemeException;
+use Hascha\BaseTheme\Exceptions\BaseThemeException;
 
 trait UseLayout
 {
@@ -11,7 +11,7 @@ trait UseLayout
     /**
      * @var string
      */
-    protected static $layoutDirectory = "\\HaschaMedia\\BaseTheme\\Components\\Layout\\";
+    protected static $layoutDirectory = "\\Hascha\\BaseTheme\\Components\\Layout\\";
 
     /**
      * @return string|null

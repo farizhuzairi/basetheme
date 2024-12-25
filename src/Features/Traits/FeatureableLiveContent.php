@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Features\Traits;
+namespace Hascha\BaseTheme\Features\Traits;
 
 use Closure;
-use HaschaMedia\BaseTheme\Features\Traits\FeatureableContent;
+use Hascha\BaseTheme\Features\Traits\FeatureableContent;
 
 trait FeatureableLiveContent
 {

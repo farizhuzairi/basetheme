@@ -1,11 +1,11 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Contracts\Factory;
+namespace Hascha\BaseTheme\Contracts\Factory;
 
 interface Html
 {
     /**
-     * @param \HaschaMedia\BaseTheme\Contracts\Element\Elementable|\HaschaMedia\BaseTheme\Contracts\Component\Componentable $html
+     * @param \Hascha\BaseTheme\Contracts\Element\Elementable|\Hascha\BaseTheme\Contracts\Component\Componentable $html
      * @return static
      */
     public function set($html);

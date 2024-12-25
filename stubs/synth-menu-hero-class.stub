@@ -2,7 +2,7 @@
 
 namespace App\Data\Synth{{ synthClassDir }};
 
-use HaschaMedia\BaseTheme\Livewire\BaseSynth;
+use Hascha\BaseTheme\Livewire\BaseSynth;
 use App\Data\Models{{ modelClassDir }}{{ modelName }};
 
 class {{ synthClassName }} extends BaseSynth

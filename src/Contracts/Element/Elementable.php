@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Contracts\Element;
+namespace Hascha\BaseTheme\Contracts\Element;
 
 interface Elementable
 {}

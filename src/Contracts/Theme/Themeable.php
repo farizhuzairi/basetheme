@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Contracts\Theme;
+namespace Hascha\BaseTheme\Contracts\Theme;
 
 interface Themeable
 {}

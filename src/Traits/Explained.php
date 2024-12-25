@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Traits;
+namespace Hascha\BaseTheme\Traits;
 
 trait Explained
 {
-    use \HaschaMedia\BaseTheme\Traits\HasLiveDataKey;
+    use \Hascha\BaseTheme\Traits\HasLiveDataKey;
     
     /**
      * Define keywords for each required variable.

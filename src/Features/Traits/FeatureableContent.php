@@ -1,11 +1,11 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Features\Traits;
+namespace Hascha\BaseTheme\Features\Traits;
 
 use Closure;
 use Illuminate\Support\Collection;
-use HaschaMedia\BaseTheme\Factory\ComponentFactory;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Factory\ComponentFactory;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
 
 trait FeatureableContent
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Livewire\LiveForm;
+namespace Hascha\BaseTheme\Livewire\LiveForm;
 
 interface LiveableFormComponent
 {}

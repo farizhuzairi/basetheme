@@ -1,5 +1,5 @@
 @php
-foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Content::class, [], 'header') as $_key => $i) {
+foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Content::class, [], 'header') as $_key => $i) {
     echo e($i);
 }
 @endphp

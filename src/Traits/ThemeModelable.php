@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Traits;
+namespace Hascha\BaseTheme\Traits;
 
 use Illuminate\Contracts\View\View;
-use HaschaMedia\BaseTheme\Factory\ThemeFactory;
-use HaschaMedia\BaseTheme\Traits\ThemeModelFactory;
+use Hascha\BaseTheme\Factory\ThemeFactory;
+use Hascha\BaseTheme\Traits\ThemeModelFactory;
 
 trait ThemeModelable
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\Components\Buttons;
+namespace Hascha\BaseTheme\View\Components\Buttons;
 
 use Illuminate\View\View;
 use Illuminate\View\Component;
-use HaschaMedia\BaseTheme\Services\ThemeService;
-use HaschaMedia\BaseTheme\Builder\Component\BaseComponent;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Builder\Component\BaseComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
 
 class Index extends BaseComponent implements Componentable
 {

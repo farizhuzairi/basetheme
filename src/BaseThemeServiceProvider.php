@@ -1,20 +1,20 @@
 <?php
 
-namespace HaschaMedia\BaseTheme;
+namespace Hascha\BaseTheme;
 
 use Illuminate\Support\ServiceProvider;
-use HaschaMedia\BaseTheme\Support\Exists;
-use HaschaMedia\BaseTheme\Services\ThemeConfig;
-use HaschaMedia\BaseTheme\Contracts\Explainable;
-use HaschaMedia\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Support\Exists;
+use Hascha\BaseTheme\Services\ThemeConfig;
+use Hascha\BaseTheme\Contracts\Explainable;
+use Hascha\BaseTheme\Services\ThemeService;
 use Illuminate\Contracts\Foundation\Application;
-use HaschaMedia\BaseTheme\Factory\ElementFactory;
-use HaschaMedia\BaseTheme\Services\Configuration;
-use HaschaMedia\BaseTheme\Services\ExplainService;
-use HaschaMedia\BaseTheme\Factory\ComponentFactory;
-use HaschaMedia\BaseTheme\Factory\Element\HtmlElement;
-use HaschaMedia\BaseTheme\Factory\Component\HtmlComponent;
-use HaschaMedia\BaseTheme\Console\Commands as BaseCommands;
+use Hascha\BaseTheme\Factory\ElementFactory;
+use Hascha\BaseTheme\Services\Configuration;
+use Hascha\BaseTheme\Services\ExplainService;
+use Hascha\BaseTheme\Factory\ComponentFactory;
+use Hascha\BaseTheme\Factory\Element\HtmlElement;
+use Hascha\BaseTheme\Factory\Component\HtmlComponent;
+use Hascha\BaseTheme\Console\Commands as BaseCommands;
 
 class BaseThemeServiceProvider extends ServiceProvider
 {
@@ -64,7 +64,7 @@ class BaseThemeServiceProvider extends ServiceProvider
          */
         Exists::setLivewireComponents(
             __DIR__ . '/View/BaseLiveComponent',
-            'HaschaMedia\\BaseTheme\\View\\BaseLiveComponent\\',
+            'Hascha\\BaseTheme\\View\\BaseLiveComponent\\',
             'View/BaseLiveComponent/'
         );
 
@@ -94,7 +94,7 @@ class BaseThemeServiceProvider extends ServiceProvider
 
         $this->app->scoped(ThemeService::class, function () {
             return new ThemeService(
-                layoutBuilder: \HaschaMedia\BaseTheme\Builder\LayoutBuilder::class
+                layoutBuilder: \Hascha\BaseTheme\Builder\LayoutBuilder::class
             );
         });
 
@@ -129,11 +129,11 @@ class BaseThemeServiceProvider extends ServiceProvider
 
         foreach([
             [
-                'class' => \HaschaMedia\BaseTheme\Features\ContentService::class,
+                'class' => \Hascha\BaseTheme\Features\ContentService::class,
                 'attributes' => []
             ],
             [
-                'class' => \HaschaMedia\BaseTheme\Features\SidebarService::class,
+                'class' => \Hascha\BaseTheme\Features\SidebarService::class,
                 'attributes' => []
             ],
         ] as $i) {

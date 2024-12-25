@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Features\Traits;
+namespace Hascha\BaseTheme\Features\Traits;
 
 trait FeatureableSubject
 {

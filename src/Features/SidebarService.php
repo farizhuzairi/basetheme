@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Features;
+namespace Hascha\BaseTheme\Features;
 
-use HaschaMedia\BaseTheme\Features\Abstract\Compilable;
-use HaschaMedia\BaseTheme\Features\Abstract\CompilableService;
-use HaschaMedia\BaseTheme\Features\Traits\FeatureableConstruct;
+use Hascha\BaseTheme\Features\Abstract\Compilable;
+use Hascha\BaseTheme\Features\Abstract\CompilableService;
+use Hascha\BaseTheme\Features\Traits\FeatureableConstruct;
 
 class SidebarService extends CompilableService implements Compilable
 {

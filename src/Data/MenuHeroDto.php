@@ -1,11 +1,11 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Data;
+namespace Hascha\BaseTheme\Data;
 
 use Illuminate\Contracts\Support\Arrayable;
-use HaschaMedia\BaseTheme\Data\Wireables\HeroMenuBar;
-use HaschaMedia\BaseTheme\Data\Wireables\HeroStackedItems;
-use HaschaMedia\BaseTheme\Features\Traits\FeatureableLiveContent;
+use Hascha\BaseTheme\Data\Wireables\HeroMenuBar;
+use Hascha\BaseTheme\Data\Wireables\HeroStackedItems;
+use Hascha\BaseTheme\Features\Traits\FeatureableLiveContent;
 
 abstract class MenuHeroDto implements Arrayable
 {

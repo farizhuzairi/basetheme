@@ -1,8 +1,8 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Contracts;
+namespace Hascha\BaseTheme\Contracts;
 
-use HaschaMedia\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Services\ThemeService;
 
 interface Explainable
 {

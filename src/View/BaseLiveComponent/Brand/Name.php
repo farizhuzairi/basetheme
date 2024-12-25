@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseLiveComponent\Brand;
+namespace Hascha\BaseTheme\View\BaseLiveComponent\Brand;
 
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
-use HaschaMedia\BaseTheme\Builder\Component\BaseLiveComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Builder\Component\BaseLiveComponent;
 
 class Name extends BaseLiveComponent implements Componentable
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Components\Features\Forms;
+namespace Hascha\BaseTheme\Components\Features\Forms;
 
 use Closure;
-use HaschaMedia\BaseTheme\Services\ThemeService;
-use HaschaMedia\BaseTheme\Features\Traits\Featureable;
-use HaschaMedia\BaseTheme\Builder\Component\BaseComponent;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
-use HaschaMedia\BaseTheme\Features\Traits\FeatureableContent;
-use HaschaMedia\BaseTheme\Features\Traits\FeatureableSubject;
-use HaschaMedia\BaseTheme\Traits\Components\SetViewComponent;
-use HaschaMedia\BaseTheme\Contracts\Component\FeatureableComponent;
+use Hascha\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Features\Traits\Featureable;
+use Hascha\BaseTheme\Builder\Component\BaseComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Features\Traits\FeatureableContent;
+use Hascha\BaseTheme\Features\Traits\FeatureableSubject;
+use Hascha\BaseTheme\Traits\Components\SetViewComponent;
+use Hascha\BaseTheme\Contracts\Component\FeatureableComponent;
 
 class BaseForm extends BaseComponent implements Componentable, FeatureableComponent
 {

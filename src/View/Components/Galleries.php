@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\Components;
+namespace Hascha\BaseTheme\View\Components;
 
-use HaschaMedia\BaseTheme\Builder\Component\BaseComponent;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Builder\Component\BaseComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
 
 class Galleries extends BaseComponent implements Componentable
 {

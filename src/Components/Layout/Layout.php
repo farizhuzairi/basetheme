@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Components\Layout;
+namespace Hascha\BaseTheme\Components\Layout;
 
-use HaschaMedia\BaseTheme\Contracts\Htmlable;
-use HaschaMedia\BaseTheme\Builder\Layout\BaseLayout;
-use HaschaMedia\BaseTheme\Contracts\Layout\Layoutable;
+use Hascha\BaseTheme\Contracts\Htmlable;
+use Hascha\BaseTheme\Builder\Layout\BaseLayout;
+use Hascha\BaseTheme\Contracts\Layout\Layoutable;
 
 class Layout extends BaseLayout implements Htmlable, Layoutable
 {

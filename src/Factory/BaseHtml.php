@@ -1,8 +1,8 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Factory;
+namespace Hascha\BaseTheme\Factory;
 
-use HaschaMedia\BaseTheme\Contracts\Layouting;
+use Hascha\BaseTheme\Contracts\Layouting;
 
 abstract class BaseHtml
 {
@@ -14,7 +14,7 @@ abstract class BaseHtml
 
     /**
      * Builder implementation
-     * @return static|\HaschaMedia\BaseTheme\Contracts\Component\Componentable
+     * @return static|\Hascha\BaseTheme\Contracts\Component\Componentable
      */
     abstract protected function toBuilder(Layouting $builder);
 }

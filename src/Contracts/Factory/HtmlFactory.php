@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Contracts\Factory;
+namespace Hascha\BaseTheme\Contracts\Factory;
 
 use Closure;
-use HaschaMedia\BaseTheme\Contracts\Factory\Html;
+use Hascha\BaseTheme\Contracts\Factory\Html;
 
 interface HtmlFactory
 {

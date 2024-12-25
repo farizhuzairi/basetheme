@@ -3,7 +3,7 @@
 
 <div id="sidebar" class="w-64 h-screen bg-c-dark dark:bg-c-dark text-c-light text-[0.9em] fixed top-0 z-20 hidden md:flex md:flex-col md:gap-0 pt-12">
     @php
-    foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Sidebar::class, [], 'headPanel') as $_key => $i) {
+    foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Sidebar::class, [], 'headPanel') as $_key => $i) {
         echo e($i);
     }
     @endphp
@@ -12,7 +12,7 @@
         <x-panel::user-panel/>
 
         @php
-        foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Sidebar::class, [], 'main') as $_key => $i) {
+        foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Sidebar::class, [], 'main') as $_key => $i) {
             echo e($i);
         }
         @endphp

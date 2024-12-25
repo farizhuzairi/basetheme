@@ -5,7 +5,7 @@
         @if($slot->isEmpty())
         <livewire:nav-brand/>
         @php
-        foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Content::class, ['navMenu'], 'header') as $_key => $i) {
+        foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Content::class, ['navMenu'], 'header') as $_key => $i) {
             echo e($i);
         }
         @endphp

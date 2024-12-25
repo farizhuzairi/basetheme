@@ -1,29 +1,29 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Factory\Component;
+namespace Hascha\BaseTheme\Factory\Component;
 
 use Closure;
-use HaschaMedia\BaseTheme\Factory\BaseHtml;
-use HaschaMedia\BaseTheme\Contracts\Layouting;
-use HaschaMedia\BaseTheme\Contracts\Factory\Html;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Factory\BaseHtml;
+use Hascha\BaseTheme\Contracts\Layouting;
+use Hascha\BaseTheme\Contracts\Factory\Html;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
 
 class HtmlComponent extends BaseHtml implements Html
 {
     /**
-     * @var \HaschaMedia\BaseTheme\Contracts\Component\Componentable
+     * @var \Hascha\BaseTheme\Contracts\Component\Componentable
      */
     private $component;
 
     /**
      * Construction
-     * @param \HaschaMedia\BaseTheme\Contracts\Layouting $layoutBuilder
+     * @param \Hascha\BaseTheme\Contracts\Layouting $layoutBuilder
      */
     public function __construct(protected Layouting $layoutBuilder)
     {}
 
     /**
-     * @param \HaschaMedia\BaseTheme\Contracts\Component\Componentable $html
+     * @param \Hascha\BaseTheme\Contracts\Component\Componentable $html
      * @return static
      */
     public function set($html): static
@@ -36,7 +36,7 @@ class HtmlComponent extends BaseHtml implements Html
 
     /**
      * Builder implementation
-     * @return \HaschaMedia\BaseTheme\Contracts\Component\Componentable
+     * @return \Hascha\BaseTheme\Contracts\Component\Componentable
      */
     protected function toBuilder(Layouting $builder): Componentable
     {

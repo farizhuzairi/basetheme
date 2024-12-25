@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Livewire\Wireable;
+namespace Hascha\BaseTheme\Livewire\Wireable;
 
 interface WireableComponent
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Console;
+namespace Hascha\BaseTheme\Console;
 
 use Illuminate\Console\Command;
 

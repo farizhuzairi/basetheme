@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseComponent;
+namespace Hascha\BaseTheme\View\BaseComponent;
 
-use HaschaMedia\BaseTheme\Traits\Explained;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
-use HaschaMedia\BaseTheme\Builder\Component\BaseComponent;
+use Hascha\BaseTheme\Traits\Explained;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Builder\Component\BaseComponent;
 
 class Navigation extends BaseComponent implements Componentable
 {

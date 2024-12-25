@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Features\Traits;
+namespace Hascha\BaseTheme\Features\Traits;
 
-use HaschaMedia\BaseTheme\Contracts\Layouting;
-use HaschaMedia\BaseTheme\Contracts\Component\FeatureableComponent;
+use Hascha\BaseTheme\Contracts\Layouting;
+use Hascha\BaseTheme\Contracts\Component\FeatureableComponent;
 
 trait Featureable
 {
@@ -125,8 +125,8 @@ trait Featureable
     }
 
     /**
-     * @param \HaschaMedia\BaseTheme\Contracts\Layouting $builder
-     * @return \HaschaMedia\BaseTheme\Contracts\Component\FeatureableComponent|null
+     * @param \Hascha\BaseTheme\Contracts\Layouting $builder
+     * @return \Hascha\BaseTheme\Contracts\Component\FeatureableComponent|null
      */
     public function accept(Layouting $builder): FeatureableComponent
     {

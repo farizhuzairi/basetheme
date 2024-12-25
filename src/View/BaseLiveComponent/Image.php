@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseLiveComponent;
+namespace Hascha\BaseTheme\View\BaseLiveComponent;
 
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
-use HaschaMedia\BaseTheme\Builder\Component\BaseLiveComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Builder\Component\BaseLiveComponent;
 
 class Image extends BaseLiveComponent implements Componentable
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Exceptions;
+namespace Hascha\BaseTheme\Exceptions;
 
 use Exception;
 use Illuminate\Support\Facades\Log;

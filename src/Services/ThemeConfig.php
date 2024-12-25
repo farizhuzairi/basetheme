@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Services;
+namespace Hascha\BaseTheme\Services;
 
 use Illuminate\Support\Str;
-use HaschaMedia\BaseTheme\Services\Configuration;
+use Hascha\BaseTheme\Services\Configuration;
 
 class ThemeConfig
 {
@@ -25,7 +25,7 @@ class ThemeConfig
     /**
      * Configuration package
      * 
-     * @var \HaschaMedia\BaseTheme\Services\Configuration
+     * @var \Hascha\BaseTheme\Services\Configuration
      */
     private static $config;
 

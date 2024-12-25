@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Factory;
+namespace Hascha\BaseTheme\Factory;
 
 use Closure;
-use HaschaMedia\BaseTheme\Contracts\Factory\Html;
-use HaschaMedia\BaseTheme\Contracts\Factory\HtmlFactory;
+use Hascha\BaseTheme\Contracts\Factory\Html;
+use Hascha\BaseTheme\Contracts\Factory\HtmlFactory;
 
 final class ComponentFactory implements HtmlFactory
 {

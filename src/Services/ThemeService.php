@@ -1,12 +1,12 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Services;
+namespace Hascha\BaseTheme\Services;
 
 use Closure;
-use HaschaMedia\BaseTheme\Traits\AltKey;
-use HaschaMedia\BaseTheme\Contracts\Builder;
-use HaschaMedia\BaseTheme\Exceptions\BaseThemeException;
-use HaschaMedia\BaseTheme\Traits\Has\HasGlobalDataComposer;
+use Hascha\BaseTheme\Traits\AltKey;
+use Hascha\BaseTheme\Contracts\Builder;
+use Hascha\BaseTheme\Exceptions\BaseThemeException;
+use Hascha\BaseTheme\Traits\Has\HasGlobalDataComposer;
 
 class ThemeService
 {

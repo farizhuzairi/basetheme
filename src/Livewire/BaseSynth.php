@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Livewire;
+namespace Hascha\BaseTheme\Livewire;
 
 use Livewire\Mechanisms\HandleComponents\Synthesizers\Synth;
 

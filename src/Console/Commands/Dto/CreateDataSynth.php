@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Console\Commands\Dto;
+namespace Hascha\BaseTheme\Console\Commands\Dto;
 
 use Illuminate\Support\Str;
 use Illuminate\Console\Command;
@@ -34,14 +34,14 @@ class CreateDataSynth extends Command
 
         switch($dtoFeature) {
             case "Board":
-                $parentModel = \HaschaMedia\BaseTheme\Data\BoardDto::class;
+                $parentModel = \Hascha\BaseTheme\Data\BoardDto::class;
                 $parentModelName = 'BoardDto';
                 $stubModel = 'synth-board-model-class.stub';
                 $stubSynth = 'synth-board-class.stub';
                 break;
             case "Hero":
             case "MenuHero":
-                $parentModel = \HaschaMedia\BaseTheme\Data\MenuHeroDto::class;
+                $parentModel = \Hascha\BaseTheme\Data\MenuHeroDto::class;
                 $parentModelName = 'MenuHeroDto';
                 $stubModel = 'synth-menu-hero-model-class.stub';
                 $stubSynth = 'synth-menu-hero-class.stub';

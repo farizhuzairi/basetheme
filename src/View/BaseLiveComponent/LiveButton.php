@@ -1,14 +1,14 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseLiveComponent;
+namespace Hascha\BaseTheme\View\BaseLiveComponent;
 
 use Illuminate\Http\Request;
-use HaschaMedia\BaseTheme\Traits\Explained;
-use HaschaMedia\BaseTheme\Data\Wireables\Button;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
-use HaschaMedia\BaseTheme\Builder\Component\BaseLiveComponent;
-use HaschaMedia\BaseTheme\Livewire\Wireable\WireableComponent;
-use HaschaMedia\BaseTheme\Livewire\Wireable\UseWireableComponent;
+use Hascha\BaseTheme\Traits\Explained;
+use Hascha\BaseTheme\Data\Wireables\Button;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Builder\Component\BaseLiveComponent;
+use Hascha\BaseTheme\Livewire\Wireable\WireableComponent;
+use Hascha\BaseTheme\Livewire\Wireable\UseWireableComponent;
 
 class LiveButton extends BaseLiveComponent implements Componentable, WireableComponent
 {

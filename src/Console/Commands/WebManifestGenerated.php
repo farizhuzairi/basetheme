@@ -1,11 +1,11 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Console\Commands;
+namespace Hascha\BaseTheme\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Artisan;
-use HaschaMedia\BaseTheme\Console\BaseCommand;
+use Hascha\BaseTheme\Console\BaseCommand;
 
 class WebManifestGenerated extends BaseCommand
 {

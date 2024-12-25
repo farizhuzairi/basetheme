@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseComponent\Panels;
+namespace Hascha\BaseTheme\View\BaseComponent\Panels;
 
-use HaschaMedia\BaseTheme\Traits\Explained;
-use HaschaMedia\BaseTheme\Builder\Component\BaseComponent;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Traits\Explained;
+use Hascha\BaseTheme\Builder\Component\BaseComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
 
 class HeadPanel extends BaseComponent implements Componentable
 {

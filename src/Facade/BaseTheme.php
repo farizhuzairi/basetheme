@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Facade;
+namespace Hascha\BaseTheme\Facade;
 
 use Illuminate\Support\Facades\Facade;
-use HaschaMedia\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Services\ThemeService;
 
 class BaseTheme extends Facade
 {

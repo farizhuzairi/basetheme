@@ -1,11 +1,11 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Support;
+namespace Hascha\BaseTheme\Support;
 
 use Livewire\Livewire;
 use Illuminate\Support\Facades;
 use Illuminate\Support\Facades\Blade;
-use HaschaMedia\BaseTheme\Support\Manager;
+use Hascha\BaseTheme\Support\Manager;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
 class Exists
@@ -16,7 +16,7 @@ class Exists
          * Base Theme Component
          */
         Blade::componentNamespace(
-            'HaschaMedia\\BaseTheme\\View\\BaseComponent',
+            'Hascha\\BaseTheme\\View\\BaseComponent',
             'base-component'
         );
 
@@ -24,7 +24,7 @@ class Exists
          * Base Component, with Component Class
          */
         Blade::componentNamespace(
-            'HaschaMedia\\BaseTheme\\View\\Components',
+            'Hascha\\BaseTheme\\View\\Components',
             'component'
         );
 
@@ -32,7 +32,7 @@ class Exists
          * Panel Component
          */
         Blade::componentNamespace(
-            'HaschaMedia\\BaseTheme\\View\\BaseComponent\\Panels',
+            'Hascha\\BaseTheme\\View\\BaseComponent\\Panels',
             'panel'
         );
 
@@ -40,7 +40,7 @@ class Exists
          * Drip Content Component
          */
         Blade::component(
-            'HaschaMedia\\BaseTheme\\View\\Components\\DripContent\\Index',
+            'Hascha\\BaseTheme\\View\\Components\\DripContent\\Index',
             'drip-content'
         );
 
@@ -48,7 +48,7 @@ class Exists
          * Button Component
          */
         Blade::componentNamespace(
-            'HaschaMedia\\BaseTheme\\View\\Components\\Buttons',
+            'Hascha\\BaseTheme\\View\\Components\\Buttons',
             'buttons'
         );
     }
@@ -64,7 +64,7 @@ class Exists
                 'base::livewire.*',
                 'components.*',
             ],
-            \HaschaMedia\BaseTheme\View\Composers\ServiceComposer::class
+            \Hascha\BaseTheme\View\Composers\ServiceComposer::class
         );
     }
 
@@ -85,9 +85,9 @@ class Exists
         }
 
         foreach ([
-            'gridable-order' => \HaschaMedia\BaseTheme\View\LiveFeatures\Gridable\Item::class,
-            'charts' => \HaschaMedia\BaseTheme\View\LiveFeatures\Charts\Index::class,
-            'menu-hero' => \HaschaMedia\BaseTheme\View\LiveFeatures\Menu\Hero\Index::class,
+            'gridable-order' => \Hascha\BaseTheme\View\LiveFeatures\Gridable\Item::class,
+            'charts' => \Hascha\BaseTheme\View\LiveFeatures\Charts\Index::class,
+            'menu-hero' => \Hascha\BaseTheme\View\LiveFeatures\Menu\Hero\Index::class,
         ] as $name => $class) {
             Livewire::component(
                 $name,

@@ -1,15 +1,15 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseLiveComponent;
+namespace Hascha\BaseTheme\View\BaseLiveComponent;
 
 use Closure;
 use Illuminate\Http\Request;
-use HaschaMedia\BaseTheme\Services\ThemeService;
-use HaschaMedia\BaseTheme\Data\Wireables\SideMenuList;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
-use HaschaMedia\BaseTheme\Builder\Component\BaseLiveComponent;
-use HaschaMedia\BaseTheme\Livewire\Wireable\WireableComponent;
-use HaschaMedia\BaseTheme\Livewire\Wireable\UseWireableComponent;
+use Hascha\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Data\Wireables\SideMenuList;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Builder\Component\BaseLiveComponent;
+use Hascha\BaseTheme\Livewire\Wireable\WireableComponent;
+use Hascha\BaseTheme\Livewire\Wireable\UseWireableComponent;
 
 class SideMenu extends BaseLiveComponent implements Componentable, WireableComponent
 {

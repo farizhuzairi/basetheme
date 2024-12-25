@@ -1,12 +1,12 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseComponent\Panels;
+namespace Hascha\BaseTheme\View\BaseComponent\Panels;
 
 use Illuminate\Support\Facades\Auth;
-use HaschaMedia\BaseTheme\Traits\Explained;
-use HaschaMedia\BaseTheme\Services\ThemeService;
-use HaschaMedia\BaseTheme\Builder\Component\BaseComponent;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Traits\Explained;
+use Hascha\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Builder\Component\BaseComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
 
 class UserPanel extends BaseComponent implements Componentable
 {

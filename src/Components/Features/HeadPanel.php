@@ -1,13 +1,13 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Components\Features;
+namespace Hascha\BaseTheme\Components\Features;
 
-use HaschaMedia\BaseTheme\Traits\Explained;
-use HaschaMedia\BaseTheme\Features\Traits\Featureable;
-use HaschaMedia\BaseTheme\Builder\Component\BaseComponent;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
-use HaschaMedia\BaseTheme\Features\Traits\FeatureableSubject;
-use HaschaMedia\BaseTheme\Contracts\Component\FeatureableComponent;
+use Hascha\BaseTheme\Traits\Explained;
+use Hascha\BaseTheme\Features\Traits\Featureable;
+use Hascha\BaseTheme\Builder\Component\BaseComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Features\Traits\FeatureableSubject;
+use Hascha\BaseTheme\Contracts\Component\FeatureableComponent;
 
 class HeadPanel extends BaseComponent implements Componentable, FeatureableComponent
 {

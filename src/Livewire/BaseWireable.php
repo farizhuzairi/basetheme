@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Livewire;
+namespace Hascha\BaseTheme\Livewire;
 
 use Livewire\Wireable;
 use Illuminate\Contracts\Support\Arrayable;

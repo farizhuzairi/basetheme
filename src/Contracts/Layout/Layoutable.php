@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Contracts\Layout;
+namespace Hascha\BaseTheme\Contracts\Layout;
 
 use Closure;
-use HaschaMedia\BaseTheme\Contracts\Layouting;
+use Hascha\BaseTheme\Contracts\Layouting;
 
 interface Layoutable
 {}

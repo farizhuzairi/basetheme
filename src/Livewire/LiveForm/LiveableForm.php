@@ -1,8 +1,8 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Livewire\LiveForm;
+namespace Hascha\BaseTheme\Livewire\LiveForm;
 
-use HaschaMedia\BaseTheme\Livewire\LiveForm\LiveableFormComponent;
+use Hascha\BaseTheme\Livewire\LiveForm\LiveableFormComponent;
 
 interface LiveableForm
 {
@@ -17,7 +17,7 @@ interface LiveableForm
      * 'Override' for form processing:
      * Submit form.
      * @param array $validated
-     * @param \HaschaMedia\BaseTheme\Livewire\LiveForm\LiveableFormComponent $baseForm
+     * @param \Hascha\BaseTheme\Livewire\LiveForm\LiveableFormComponent $baseForm
      * @return \Closure|\Illuminate\Http\Response|bool|null
      */
     public function handle(array $validated, LiveableFormComponent $baseForm);

@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Traits\Dto;
+namespace Hascha\BaseTheme\Traits\Dto;
 
 trait HasWirePoll
 {

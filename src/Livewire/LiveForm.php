@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Livewire;
+namespace Hascha\BaseTheme\Livewire;
 
 use Livewire\Form;
 use Illuminate\Support\Collection;
-use HaschaMedia\BaseTheme\Livewire\LiveForm\LiveableFormComponent;
+use Hascha\BaseTheme\Livewire\LiveForm\LiveableFormComponent;
 
 abstract class LiveForm extends Form
 {
@@ -102,7 +102,7 @@ abstract class LiveForm extends Form
      * 'Override' for form processing:
      * Submit form.
      * @param array $validated
-     * @param \HaschaMedia\BaseTheme\Livewire\LiveForm\LiveableFormComponent $baseForm
+     * @param \Hascha\BaseTheme\Livewire\LiveForm\LiveableFormComponent $baseForm
      * @return \Closure|\Illuminate\Http\Response|bool|null
      */
     public function handle(array $validated, LiveableFormComponent $baseForm)

@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\Composers;
+namespace Hascha\BaseTheme\View\Composers;
 
 use Illuminate\View\View;
 use Illuminate\Support\Collection;

@@ -1,20 +1,20 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Builder;
+namespace Hascha\BaseTheme\Builder;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\ComponentAttributeBag;
-use HaschaMedia\BaseTheme\Contracts\Builder;
-use HaschaMedia\BaseTheme\Contracts\Layouting;
-use HaschaMedia\BaseTheme\Traits\HasLiveDataKey;
-use HaschaMedia\BaseTheme\Traits\Factory\UseTheme;
-use HaschaMedia\BaseTheme\Traits\Factory\UseLayout;
-use HaschaMedia\BaseTheme\Contracts\Theme\Themeable;
-use HaschaMedia\BaseTheme\Contracts\Layout\Layoutable;
-use HaschaMedia\BaseTheme\Contracts\Element\Elementable;
-use HaschaMedia\BaseTheme\Exceptions\BaseThemeException;
-use HaschaMedia\BaseTheme\Contracts\Component\FeatureableComponent;
+use Hascha\BaseTheme\Contracts\Builder;
+use Hascha\BaseTheme\Contracts\Layouting;
+use Hascha\BaseTheme\Traits\HasLiveDataKey;
+use Hascha\BaseTheme\Traits\Factory\UseTheme;
+use Hascha\BaseTheme\Traits\Factory\UseLayout;
+use Hascha\BaseTheme\Contracts\Theme\Themeable;
+use Hascha\BaseTheme\Contracts\Layout\Layoutable;
+use Hascha\BaseTheme\Contracts\Element\Elementable;
+use Hascha\BaseTheme\Exceptions\BaseThemeException;
+use Hascha\BaseTheme\Contracts\Component\FeatureableComponent;
 
 final class LayoutBuilder implements Builder, Layouting
 {

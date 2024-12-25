@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Support;
+namespace Hascha\BaseTheme\Support;
 
 class Manager
 {

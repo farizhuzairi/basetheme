@@ -6,7 +6,7 @@
         </h2>
     </div>
     @php
-    foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Content::class, [], 'main') as $_key => $i) {
+    foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Content::class, [], 'main') as $_key => $i) {
         echo e($i);
     }
     @endphp

@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Contracts;
+namespace Hascha\BaseTheme\Contracts;
 
 interface Config
 {

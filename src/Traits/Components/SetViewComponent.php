@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Traits\Components;
+namespace Hascha\BaseTheme\Traits\Components;
 
 trait SetViewComponent
 {

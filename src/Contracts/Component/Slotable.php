@@ -1,6 +1,6 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Contracts\Component;
+namespace Hascha\BaseTheme\Contracts\Component;
 
 interface Slotable
 {

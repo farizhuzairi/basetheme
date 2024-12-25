@@ -1,9 +1,9 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Livewire\Wireable;
+namespace Hascha\BaseTheme\Livewire\Wireable;
 
 trait UseWireableComponent
 {
-    public \HaschaMedia\BaseTheme\Livewire\BaseWireable $dto;
+    public \Hascha\BaseTheme\Livewire\BaseWireable $dto;
     public array $arrData = [];
 }

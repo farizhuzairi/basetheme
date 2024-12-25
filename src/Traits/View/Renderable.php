@@ -1,11 +1,11 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Traits\View;
+namespace Hascha\BaseTheme\Traits\View;
 
 use Closure;
 use Illuminate\Support\Collection;
-use HaschaMedia\BaseTheme\Traits\Nameable;
-use HaschaMedia\BaseTheme\Exceptions\BaseThemeException;
+use Hascha\BaseTheme\Traits\Nameable;
+use Hascha\BaseTheme\Exceptions\BaseThemeException;
 
 trait Renderable
 {

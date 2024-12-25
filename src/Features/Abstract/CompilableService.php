@@ -1,19 +1,19 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Features\Abstract;
+namespace Hascha\BaseTheme\Features\Abstract;
 
 use Closure;
-use HaschaMedia\BaseTheme\Factory\ComponentFactory;
-use HaschaMedia\BaseTheme\Exceptions\BaseThemeException;
-use HaschaMedia\BaseTheme\Features\Traits\FeatureableContent;
-use HaschaMedia\BaseTheme\Contracts\Component\FeatureableComponent;
+use Hascha\BaseTheme\Factory\ComponentFactory;
+use Hascha\BaseTheme\Exceptions\BaseThemeException;
+use Hascha\BaseTheme\Features\Traits\FeatureableContent;
+use Hascha\BaseTheme\Contracts\Component\FeatureableComponent;
 
 abstract class CompilableService
 {
     use FeatureableContent;
     
     /**
-     * @var \HaschaMedia\BaseTheme\Factory\ComponentFactory
+     * @var \Hascha\BaseTheme\Factory\ComponentFactory
      */
     protected static $factory;
 

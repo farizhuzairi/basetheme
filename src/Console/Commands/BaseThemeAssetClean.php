@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Console\Commands;
+namespace Hascha\BaseTheme\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use HaschaMedia\BaseTheme\Console\BaseCommand;
+use Hascha\BaseTheme\Console\BaseCommand;
 
 class BaseThemeAssetClean extends BaseCommand
 {

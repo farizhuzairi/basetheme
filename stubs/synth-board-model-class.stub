@@ -3,8 +3,8 @@
 namespace App\Data\Models;
 
 use {{ parentModel }};
-use HaschaMedia\BaseTheme\Livewire\Synth\Synthable;
-use HaschaMedia\BaseTheme\Components\Features\List\Board;
+use Hascha\BaseTheme\Livewire\Synth\Synthable;
+use Hascha\BaseTheme\Components\Features\List\Board;
 
 class {{ modelClassName }} extends {{ parentModelName }} implements Synthable
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Builder\Component;
+namespace Hascha\BaseTheme\Builder\Component;
 
 use Illuminate\View\Component;
-use HaschaMedia\BaseTheme\Traits\AltKey;
-use HaschaMedia\BaseTheme\Services\ThemeService;
-use HaschaMedia\BaseTheme\Traits\View\Renderable;
+use Hascha\BaseTheme\Traits\AltKey;
+use Hascha\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Traits\View\Renderable;
 
 abstract class BaseComponent extends Component
 {

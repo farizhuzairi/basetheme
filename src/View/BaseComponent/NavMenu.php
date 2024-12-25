@@ -1,10 +1,10 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\View\BaseComponent;
+namespace Hascha\BaseTheme\View\BaseComponent;
 
-use HaschaMedia\BaseTheme\Services\ThemeService;
-use HaschaMedia\BaseTheme\Builder\Component\BaseComponent;
-use HaschaMedia\BaseTheme\Contracts\Component\Componentable;
+use Hascha\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Builder\Component\BaseComponent;
+use Hascha\BaseTheme\Contracts\Component\Componentable;
 
 class NavMenu extends BaseComponent implements Componentable
 {

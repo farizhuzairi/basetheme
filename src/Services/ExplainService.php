@@ -1,17 +1,17 @@
 <?php
 
-namespace HaschaMedia\BaseTheme\Services;
+namespace Hascha\BaseTheme\Services;
 
-use HaschaMedia\BaseTheme\Contracts\Explainable;
-use HaschaMedia\BaseTheme\Services\ThemeService;
-use HaschaMedia\BaseTheme\Traits\Has\HasGlobalDataComposer;
+use Hascha\BaseTheme\Contracts\Explainable;
+use Hascha\BaseTheme\Services\ThemeService;
+use Hascha\BaseTheme\Traits\Has\HasGlobalDataComposer;
 
 final class ExplainService implements Explainable
 {
     use HasGlobalDataComposer;
     
     /**
-     * @var \HaschaMedia\BaseTheme\Services\ThemeService
+     * @var \Hascha\BaseTheme\Services\ThemeService
      */
     private static $service;
 

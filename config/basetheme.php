@@ -21,9 +21,9 @@ return [
      * 
      */
     'default_elements' => [
-        'htmlHeader' => \HaschaMedia\BaseTheme\Components\Elements\Header::class,
-        'htmlBody' => \HaschaMedia\BaseTheme\Components\Elements\Body::class,
-        'htmlFooter' => \HaschaMedia\BaseTheme\Components\Elements\Footer::class,
+        'htmlHeader' => \Hascha\BaseTheme\Components\Elements\Header::class,
+        'htmlBody' => \Hascha\BaseTheme\Components\Elements\Body::class,
+        'htmlFooter' => \Hascha\BaseTheme\Components\Elements\Footer::class,
     ],
 
     /**

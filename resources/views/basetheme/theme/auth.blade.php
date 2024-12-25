@@ -18,7 +18,7 @@
                     x-on:click.away="tab = false" class="absolute bg-c-dark-thin text-c-light-thin h-full w-full flex flex-col gap-3 px-4 py-5">
                     <livewire:nav-brand/>
                     @php
-                    foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Sidebar::class, [], 'tab') as $_key => $i) {
+                    foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Sidebar::class, [], 'tab') as $_key => $i) {
                         echo e($i);
                     }
                     @endphp
@@ -30,7 +30,7 @@
                 <div class="bg-c-theme text-c-light-thin py-12 h-full shadow flex items-center">
                     <div class="h-auto w-full">
                         @php
-                        foreach(__featureables(\HaschaMedia\BaseTheme\Facade\Features\Sidebar::class, [], 'main') as $_key => $i) {
+                        foreach(__featureables(\Hascha\BaseTheme\Facade\Features\Sidebar::class, [], 'main') as $_key => $i) {
                             echo e($i);
                         }
                         @endphp
