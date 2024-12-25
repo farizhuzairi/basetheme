@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Data\Synth{{ synthClassDir }};
+
+use HaschaMedia\BaseTheme\Livewire\BaseSynth;
+use App\Data\Models{{ modelClassDir }}{{ modelName }};
+
+class {{ synthClassName }} extends BaseSynth
+{
+    public static $key = '{{ uniqueName }}-menu-hero';
+
+    /**
+     * Implement to define an object or property
+     * @return array
+     */
+    protected static function properties()
+    {
+        return {{ modelName }}::properties();
+    }
+
+    /**
+     * @return bool
+     */
+    protected static function hasMatch($target)
+    {
+        return $target instanceof {{ modelName }};
+    }
+
+    /**
+     * @return object
+     */
+    protected function instance()
+    {
+        return new {{ modelName }};
+    }
+}

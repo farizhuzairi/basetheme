@@ -1,0 +1,54 @@
+<?php
+
+namespace App\Themes;
+
+use HaschaMedia\BaseTheme\ThemeModel;
+
+class {{ className }} extends ThemeModel
+{
+    /*
+    * Select a theme for the type of page you want to build.
+    * page || panel
+    *
+    */
+    protected string $theme = "{{ defaultTheme }}";
+
+    /*
+    * Another name to identify a page (layout builder) or theme.
+    * This value can be ignored.
+    * However, it is highly recommended to use it if authorization is enforced
+    * in a series of data compilations to this page.
+    *
+    */
+    protected string $alias = "{{ alias }}";
+    
+    /*
+    * The name or title of the page.
+    * This is not required,
+    * but is used as a final alternative if not specified globally.
+    *
+    */
+    protected string $title = "{{ className }}";
+    
+    /**
+     * If necessary, define the required elements or specify custom elements that should be rendered.
+     * This does not add an element, but rather replaces the base (built-in) element completely.
+     * @return array|bool
+     */
+    protected function withElements()
+    {
+        return parent::withElements();
+    }
+
+    /**
+     * Use the boot() method to call various default features, customize the page, and add additional functionality that should run every time the page is rendered.
+     * 
+     * @return void
+     */
+    protected function boot()
+    {
+        parent::boot();
+
+        // Call and add other functions ...
+    }
+}

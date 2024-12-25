@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Data\Models{{ modelClassDir }};
+
+use {{ parentModel }};
+use HaschaMedia\BaseTheme\Livewire\Synth\Synthable;
+
+class {{ modelClassName }} extends {{ parentModelName }} implements Synthable
+{
+    /**
+     * Create New Data Results
+     * @return array
+     */
+    public function construction()
+    {
+        return [
+            'subject' => null,
+            'title' => null,
+            'subDescription' => null,
+        ];
+    }
+
+    /**
+     * Menu Body Content
+     * @return void
+     */
+    public function liveContents()
+    {
+        //
+    }
+
+    /**
+     * Menu Side Content
+     * @return void
+     */
+    public function sideContents()
+    {
+        //
+    }
+
+    /**
+     * Menu Additional Content
+     * @return void
+     */
+    public function additionalContents()
+    {
+        //
+    }
+}

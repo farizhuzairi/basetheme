@@ -1,0 +1,39 @@
+@layer components {
+
+    /*
+    -------------------------------------
+    Card's
+    -------------------------------------
+    */
+    
+    .card-base {
+        @apply bg-white dark:bg-c-theme
+        border border-c-border dark:border-c-border/25
+        rounded
+        text-c-dark dark:text-c-light
+        flex flex-col gap-3
+        px-3 lg:px-4 py-5;
+    }
+    
+    .card-base .card-body {
+        @apply base-flex-thin;
+    }
+    
+    .card-base .card-title {
+        @apply font-title font-medium;
+    }
+    
+    .card-base .card-column {
+        @apply text-slate-600 dark:text-slate-400;
+    }
+    
+    .card-base .card-footer {
+        @apply mt-auto py-2 w-full;
+    }
+    
+    .card-base .card-footer a {
+        @apply btn-base font-btn font-light
+        transition-all inline-block;
+    }
+
+}

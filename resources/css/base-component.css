@@ -1,0 +1,189 @@
+@layer components {
+
+    /*
+    -------------------------------------
+    Fonts
+    -------------------------------------
+    */
+
+    .font-theme {
+        @apply font-sans;
+    }
+
+    .font-primary {
+        @apply font-poppins;
+    }
+
+    .font-title {
+        @apply font-poppins tracking-wide;
+    }
+
+    .font-sub-title,
+    .font-sub-menu,
+    .font-side-menu {
+        @apply font-rubik;
+    }
+
+    .font-menu,
+    .font-list {
+        @apply font-poppins font-medium;
+    }
+
+    .font-btn {
+        @apply font-poppins;
+    }
+
+
+    /*
+    -------------------------------------
+    Font Size's
+    -------------------------------------
+    */
+
+    .size,
+    .base-size {
+        @apply text-base;
+    }
+
+    .lg-size {
+        @apply text-lg
+    }
+
+    .std-size {
+        @apply text-base;
+    }
+
+    .echo-size {
+        @apply text-sm;
+    }
+
+    .mini-size {
+        @apply text-xs;
+    }
+
+    /*
+    -------------------------------------
+    SOFT Base Component
+    -------------------------------------
+    */
+    .soft-text {
+        @apply text-c-text dark:text-c-light;
+    }
+
+    .soft-bg {
+        @apply soft-text
+        bg-gradient-to-r
+        from-c-light-thin dark:from-slate-900
+        via-c-light-thin dark:via-cyan-950
+        to-c-light-thin dark:to-slate-900;
+    }
+
+    /*
+    -------------------------------------
+    BASETHICK Base Component
+    -------------------------------------
+    */
+    .basethick-text {
+        @apply text-c-light dark:text-c-light-thin
+    }
+
+    .basethick-bg {
+        @apply basethick-text
+        bg-gradient-to-r
+        from-c-theme dark:from-c-dark
+        via-c-dark dark:via-c-theme
+        to-c-theme dark:to-c-dark;
+    }
+
+
+    /*
+    -------------------------------------
+    Base Navigation's
+    -------------------------------------
+    */
+
+    #navigation {
+        @apply transition-all ease-in-out delay-150;
+    }
+
+    .bg-nav-style,
+    .bg-nav-style-soft {
+        @apply soft-bg shadow-lg;
+    }
+
+    .bg-nav-style {
+        @apply border-b border-c-border-thin;
+    }
+
+    .bg-nav-style .nav-brand,
+    .bg-nav-style-soft .nav-brand {
+        @apply text-primary dark:text-secondary;
+    }
+
+    .bg-nav-style-basethick {
+        @apply basethick-bg;
+    }
+
+
+    .bg-top-bar-style,
+    .bg-top-bar-style-soft {
+        @apply soft-bg;
+    }
+
+    .bg-top-bar-style-basethick {
+        @apply basethick-bg;
+    }
+
+
+    .bg-sub-menu-style,
+    .bg-sub-menu-style-soft {
+        @apply bg-c-theme text-c-theme-text shadow;
+    }
+
+    .bg-sub-menu-style-soft,
+    .bg-sub-menu-style-basethick {
+        @apply
+        bg-gradient-to-r
+        from-cyan-900 dark:from-cyan-900
+        via-cyan-950 dark:via-slate-800
+        to-slate-900 dark:to-slate-900
+        text-slate-300 dark:text-slate-300;
+    }
+
+    .dropdown-soft {
+        @apply bg-c-light-thin text-c-text;
+    }
+
+    .dropdown-basethick {
+        @apply bg-c-dark text-c-light;
+    }
+
+    /*
+    -------------------------------------
+    Base Html and Body
+    -------------------------------------
+    */
+
+    .base-layout {
+        @apply antialiased font-theme
+        text-c-text dark:text-c-light
+        bg-c-light-thin dark:bg-c-dark;
+    }
+
+    .base-page {
+        @apply min-h-screen;
+    }
+
+
+    /*
+    -------------------------------------
+    Other's
+    -------------------------------------
+    */
+    .top-title-first-letter {
+        @apply text-[1.1em]
+        text-secondary
+        font-bold;
+    }
+
+}

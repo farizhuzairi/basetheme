@@ -1,0 +1,1 @@
+<button class="ring-0 active:ring-0 outline-none active:outline-none border-0 active:border-0 {{ $this->dto->css }}" type="button">{{ $this->dto->textButton }}</button>

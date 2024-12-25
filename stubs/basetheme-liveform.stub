@@ -1,0 +1,59 @@
+<?php
+
+namespace App\LiveTheme\Forms;
+
+use HaschaMedia\BaseTheme\Livewire\LiveForm;
+use HaschaMedia\BaseTheme\Livewire\LiveForm\LiveableForm;
+use HaschaMedia\BaseTheme\Livewire\LiveForm\LiveableFormComponent;
+use Illuminate\Support\Collection;
+
+class {{ className }} extends LiveForm implements LiveableForm
+{
+    // Define attributes
+    // ...
+
+    /**
+     * Set Data Modelable or Other Data Models.
+     * @return void
+     */
+    public function setForm(object|array $data)
+    {
+        if ($data instanceof Collection) {
+            $this->form = (object) ($data->toArray());
+        }
+
+        elseif (is_object($data)) {
+            $this->form = $data;
+        }
+
+        elseif (is_array($data)) {
+            $this->form = (object) $data; // set data form (master data), optional
+            $this->attributes = collect($data); // set data form attributes, required
+        }
+
+        else {
+            $this->form = (object) $form;
+        }
+    }
+
+    /**
+     * Validate values ​​using custom rules.
+     * @return array
+     */
+    protected function validationWithRules()
+    {
+        return [];
+    }
+
+    /**
+     * 'Override' for form processing:
+     * Submit form.
+     * @param array $validated
+     * @param \HaschaMedia\BaseTheme\Livewire\LiveForm\LiveableFormComponent $baseForm
+     * @return \Closure|\Illuminate\Http\Response|bool|null
+     */
+    public function handle(array $validated, LiveableFormComponent $baseForm)
+    {
+        return true;
+    }
+}

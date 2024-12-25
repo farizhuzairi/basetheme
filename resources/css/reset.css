@@ -1,0 +1,18 @@
+/*
+----------------
+Container's
+----------------
+*/
+
+@layer base {
+    
+    .base-padding {
+        @apply px-4 lg:px-8;
+    }
+    
+    .base-container {
+        @apply max-w-7xl mx-auto
+        px-4 lg:px-8;
+    }
+
+}

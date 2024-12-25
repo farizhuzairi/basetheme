@@ -1,0 +1,1 @@
+<div class="{{ empty($src) ? 'hidden' : '' }}"><x-base::image :src="$src" :alt="$alt" :class="$css"/></div>

@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Data\Models;
+
+use {{ parentModel }};
+use HaschaMedia\BaseTheme\Livewire\Synth\Synthable;
+use HaschaMedia\BaseTheme\Components\Features\List\Board;
+
+class {{ modelClassName }} extends {{ parentModelName }} implements Synthable
+{
+    /**
+     * Create New Data Results
+     * @return array
+     */
+    public function construction()
+    {
+        $result = new Board();
+        return $result->getResults();
+    }
+
+    /**
+     * Implement to define an object or properties
+     */
+    public static function properties(): array
+    {
+        return [
+            'spaces',
+            'lists'
+        ];
+    }
+
+    /**
+     * With auto update,
+     * return in number of seconds (integer) or 'null' to disable.
+     */
+    public function withPoll(): int
+    {
+        return 0;
+    }
+}

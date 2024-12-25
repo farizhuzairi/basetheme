@@ -1,0 +1,16 @@
+/vendor
+.env
+auth.json
+composer.lock
+/node_modules
+package-lock.json
+phpunit.xml.bak
+workbench
+testbench.yaml
+.phpunit.cache
+tests
+phpunit.xml
+tailwind.example.js
+vite.example.js
+docs.md
+error.md

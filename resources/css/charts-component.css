@@ -1,0 +1,412 @@
+/*
+-------------------------------------
+Bar's
+-------------------------------------
+*/
+@layer components {
+
+    .wpts-0 {
+        @apply w-0;
+    }
+
+    .wpts-1 {
+        @apply w-[1%];
+    }
+
+    .wpts-2 {
+        @apply w-[2%];
+    }
+
+    .wpts-3 {
+        @apply w-[3%];
+    }
+
+    .wpts-4 {
+        @apply w-[4%];
+    }
+
+    .wpts-5 {
+        @apply w-[5%];
+    }
+
+    .wpts-6 {
+        @apply w-[6%];
+    }
+
+    .wpts-7 {
+        @apply w-[7%];
+    }
+
+    .wpts-8 {
+        @apply w-[8%];
+    }
+
+    .wpts-9 {
+        @apply w-[9%];
+    }
+
+    .wpts-10 {
+        @apply w-[10%];
+    }
+
+    .wpts-11 {
+        @apply w-[11%];
+    }
+
+    .wpts-12 {
+        @apply w-[12%];
+    }
+
+    .wpts-13 {
+        @apply w-[13%];
+    }
+
+    .wpts-14 {
+        @apply w-[14%];
+    }
+
+    .wpts-15 {
+        @apply w-[15%];
+    }
+
+    .wpts-16 {
+        @apply w-[16%];
+    }
+
+    .wpts-17 {
+        @apply w-[17%];
+    }
+
+    .wpts-18 {
+        @apply w-[18%];
+    }
+
+    .wpts-19 {
+        @apply w-[19%];
+    }
+
+    .wpts-20 {
+        @apply w-[20%];
+    }
+
+    .wpts-21 {
+        @apply w-[21%];
+    }
+
+    .wpts-22 {
+        @apply w-[22%];
+    }
+
+    .wpts-23 {
+        @apply w-[23%];
+    }
+
+    .wpts-24 {
+        @apply w-[24%];
+    }
+
+    .wpts-25 {
+        @apply w-[25%];
+    }
+
+    .wpts-26 {
+        @apply w-[26%];
+    }
+
+    .wpts-27 {
+        @apply w-[27%];
+    }
+
+    .wpts-28 {
+        @apply w-[28%];
+    }
+
+    .wpts-29 {
+        @apply w-[29%];
+    }
+
+    .wpts-30 {
+        @apply w-[30%];
+    }
+
+    .wpts-31 {
+        @apply w-[31%];
+    }
+
+    .wpts-32 {
+        @apply w-[32%];
+    }
+
+    .wpts-33 {
+        @apply w-[33%];
+    }
+
+    .wpts-34 {
+        @apply w-[34%];
+    }
+
+    .wpts-35 {
+        @apply w-[35%];
+    }
+
+    .wpts-36 {
+        @apply w-[36%];
+    }
+
+    .wpts-37 {
+        @apply w-[37%];
+    }
+
+    .wpts-38 {
+        @apply w-[38%];
+    }
+
+    .wpts-39 {
+        @apply w-[39%];
+    }
+
+    .wpts-40 {
+        @apply w-[40%];
+    }
+
+    .wpts-41 {
+        @apply w-[41%];
+    }
+
+    .wpts-42 {
+        @apply w-[42%];
+    }
+
+    .wpts-43 {
+        @apply w-[43%];
+    }
+
+    .wpts-44 {
+        @apply w-[44%];
+    }
+
+    .wpts-45 {
+        @apply w-[45%];
+    }
+
+    .wpts-46 {
+        @apply w-[46%];
+    }
+
+    .wpts-47 {
+        @apply w-[47%];
+    }
+
+    .wpts-48 {
+        @apply w-[48%];
+    }
+
+    .wpts-49 {
+        @apply w-[49%];
+    }
+
+    .wpts-50 {
+        @apply w-[50%];
+    }
+
+    .wpts-51 {
+        @apply w-[51%];
+    }
+
+    .wpts-52 {
+        @apply w-[52%];
+    }
+
+    .wpts-53 {
+        @apply w-[53%];
+    }
+
+    .wpts-54 {
+        @apply w-[54%];
+    }
+
+    .wpts-55 {
+        @apply w-[55%];
+    }
+
+    .wpts-56 {
+        @apply w-[56%];
+    }
+
+    .wpts-57 {
+        @apply w-[57%];
+    }
+
+    .wpts-58 {
+        @apply w-[58%];
+    }
+
+    .wpts-59 {
+        @apply w-[59%];
+    }
+
+    .wpts-60 {
+        @apply w-[60%];
+    }
+
+    .wpts-61 {
+        @apply w-[61%];
+    }
+
+    .wpts-62 {
+        @apply w-[62%];
+    }
+
+    .wpts-63 {
+        @apply w-[63%];
+    }
+
+    .wpts-64 {
+        @apply w-[64%];
+    }
+
+    .wpts-65 {
+        @apply w-[65%];
+    }
+
+    .wpts-66 {
+        @apply w-[66%];
+    }
+
+    .wpts-67 {
+        @apply w-[67%];
+    }
+
+    .wpts-68 {
+        @apply w-[68%];
+    }
+
+    .wpts-69 {
+        @apply w-[69%];
+    }
+
+    .wpts-70 {
+        @apply w-[70%];
+    }
+
+    .wpts-71 {
+        @apply w-[71%];
+    }
+
+    .wpts-72 {
+        @apply w-[72%];
+    }
+
+    .wpts-73 {
+        @apply w-[73%];
+    }
+
+    .wpts-74 {
+        @apply w-[74%];
+    }
+
+    .wpts-75 {
+        @apply w-[75%];
+    }
+
+    .wpts-76 {
+        @apply w-[76%];
+    }
+
+    .wpts-77 {
+        @apply w-[77%];
+    }
+
+    .wpts-78 {
+        @apply w-[78%];
+    }
+
+    .wpts-79 {
+        @apply w-[79%];
+    }
+
+    .wpts-80 {
+        @apply w-[80%];
+    }
+
+    .wpts-81 {
+        @apply w-[81%];
+    }
+
+    .wpts-82 {
+        @apply w-[82%];
+    }
+
+    .wpts-83 {
+        @apply w-[83%];
+    }
+
+    .wpts-84 {
+        @apply w-[84%];
+    }
+
+    .wpts-85 {
+        @apply w-[85%];
+    }
+
+    .wpts-86 {
+        @apply w-[86%];
+    }
+
+    .wpts-87 {
+        @apply w-[87%];
+    }
+
+    .wpts-88 {
+        @apply w-[88%];
+    }
+
+    .wpts-89 {
+        @apply w-[89%];
+    }
+
+    .wpts-90 {
+        @apply w-[90%];
+    }
+
+    .wpts-91 {
+        @apply w-[91%];
+    }
+
+    .wpts-92 {
+        @apply w-[92%];
+    }
+
+    .wpts-93 {
+        @apply w-[93%];
+    }
+
+    .wpts-94 {
+        @apply w-[94%];
+    }
+
+    .wpts-95 {
+        @apply w-[95%];
+    }
+
+    .wpts-96 {
+        @apply w-[96%];
+    }
+
+    .wpts-97 {
+        @apply w-[97%];
+    }
+
+    .wpts-98 {
+        @apply w-[98%];
+    }
+
+    .wpts-99 {
+        @apply w-[99%];
+    }
+
+    .wpts-100 {
+        @apply w-full;
+    }
+
+}

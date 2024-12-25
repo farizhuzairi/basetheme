@@ -1,0 +1,80 @@
+@layer components {
+
+    /*
+    ----------------
+    Flex's
+    ----------------
+    */
+    
+    .base-flex {
+        @apply flex flex-col;
+    }
+    
+    .base-flex-thin {
+        @apply flex flex-col gap-1;
+    }
+    
+    .base-flex-space {
+        @apply flex flex-col gap-3;
+    }
+    
+    .base-flex-spacer {
+        @apply flex flex-col gap-5;
+    }
+    
+    .base-flex-spacer-max {
+        @apply flex flex-col gap-8;
+    }
+    
+    .base-flex-spacer-long {
+        @apply flex flex-col gap-12;
+    }
+    
+    .base-flex-wrap {
+        @apply flex flex-wrap items-center;
+    }
+    
+    .base-flex-wrap-thin {
+        @apply flex flex-wrap gap-1 items-center;
+    }
+    
+    .base-flex-wrap-space {
+        @apply flex flex-wrap gap-3 items-center;
+    }
+    
+    .base-flex-wrap-spacer {
+        @apply flex flex-wrap gap-5 items-center;
+    }
+    
+    .base-flex-wrap-spacer-max {
+        @apply flex flex-wrap gap-8 items-center;
+    }
+    
+    .base-flex-wrap-spacer-long {
+        @apply flex flex-wrap gap-12 items-center;
+    }
+    
+    .base-flex-row {
+        @apply flex flex-row items-center;
+    }
+    
+    .base-flex-row-thin {
+        @apply flex flex-row gap-1 items-center;
+    }
+    
+    .base-flex-row-space {
+        @apply flex flex-row gap-3 items-center;
+    }
+    
+    .base-flex-row-spacer {
+        @apply flex flex-row gap-5 items-center;
+    }
+    
+    .base-flex-row-spacer-max {
+        @apply flex flex-row gap-8 items-center;
+    }
+    
+    .base-flex-row-spacer-long {
+        @apply flex flex-row gap-12 items-center;
+    }
+}

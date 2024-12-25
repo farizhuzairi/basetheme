@@ -1,0 +1,1 @@
+<x-base::buttons.reset :border="false" class="{{ $this->dto->css }}" wire:click="{{ $this->dto->withPrevent }}">{{ $this->dto->textButton }}</x-base::buttons.reset>
