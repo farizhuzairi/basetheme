@@ -1,5 +1,5 @@
 {
-    "name": "haschamedia/basetheme",
+    "name": "farizhuzairi/basetheme",
     "version": "dev-main",
     "type": "library",
     "description": "Tema Dasar Untuk Laravel Blade dan Komponen Menggunakan Tailwind CSS",
@@ -10,8 +10,8 @@
     ],
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/haschamedia/basetheme/issues",
-        "source": "https://github.com/haschamedia/basetheme"
+        "issues": "https://github.com/farizhuzairi/basetheme/issues",
+        "source": "https://github.com/farizhuzairi/basetheme"
     },
     "authors": [
         {
