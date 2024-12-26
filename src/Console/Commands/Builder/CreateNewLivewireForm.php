@@ -24,7 +24,7 @@ class CreateNewLivewireForm extends Command
             File::makeDirectory($directory, 0755, true);
         }
 
-        $stubPath = base_path('vendor/haschamedia/basetheme/stubs/basetheme-liveform.stub');
+        $stubPath = base_path('vendor/farizhuzairi/basetheme/stubs/basetheme-liveform.stub');
         if (!$stubPath || !File::exists($stubPath)) {
             $this->error("Stub file does not exist at path $stubPath.");
             return;

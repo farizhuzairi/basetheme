@@ -69,7 +69,7 @@ class CreateDataSynth extends Command
         $modelClassName = Str::replace(" ", "", $dtoModelName);
         $dirModel = app_path('Data/Models' . str_replace('\\', '/', $withDirectory));
 
-        $model = base_path('vendor/haschamedia/basetheme/stubs/' . $stubModel);
+        $model = base_path('vendor/farizhuzairi/basetheme/stubs/' . $stubModel);
         if (!$model || !File::exists($model)) {
             $this->error("Stub file does not exist at path $model.");
             return 1;
@@ -87,7 +87,7 @@ class CreateDataSynth extends Command
         $synthClassName = Str::replace(" ", "", $dtoClassName);
         $dirSynth = app_path('Data/Synth' . str_replace('\\', '/', $withDirectory));
 
-        $synth = base_path('vendor/haschamedia/basetheme/stubs/' . $stubSynth);
+        $synth = base_path('vendor/farizhuzairi/basetheme/stubs/' . $stubSynth);
         if (!$synth || !File::exists($synth)) {
             $this->error("Stub file does not exist at path $synth.");
             return 1;

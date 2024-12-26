@@ -25,7 +25,7 @@ class CreateNewPage extends Command
         }
 
         // $stubPath = __DIR__.'/../../../stubs/basetheme-model.stub';
-        $stubPath = base_path('vendor/haschamedia/basetheme/stubs/basetheme-model.stub');
+        $stubPath = base_path('vendor/farizhuzairi/basetheme/stubs/basetheme-model.stub');
         if (!$stubPath || !File::exists($stubPath)) {
             $this->error("Stub file does not exist at path $stubPath.");
             return;

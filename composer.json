@@ -38,6 +38,7 @@
             "Hascha\\BaseTheme\\": "src/"
         }
     },
+    
     "extra": {
         "laravel": {
             "providers": [
