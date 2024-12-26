@@ -45,7 +45,7 @@ class BaseThemeServiceProvider extends ServiceProvider
             __DIR__.'/../dist/css' => public_path('basetheme/css'),
             __DIR__.'/../dist/js' => public_path('basetheme/js'),
             __DIR__.'/../dist/assets' => public_path('build/assets'),
-            __DIR__.'/../resources/images/base-layout' => public_path('images/base-layout'),
+            __DIR__.'/../resources/images' => public_path('images'),
             __DIR__.'/../resources/icons' => public_path('icons'),
         ], 'basetheme-assets');
 

@@ -54,7 +54,7 @@
             text="Login"
             icon="hascha-true-sign-in"
             typeOf="link"
-            :url="route('login')"
+            :url="Route::has('login') ? route('login') : '#'"
             />
             @endif
         </div>

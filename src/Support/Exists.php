@@ -74,25 +74,29 @@ class Exists
      */
     public static function setLivewireComponents(string $directory, string $baseNamespace, string $separator = "")
     {
-        foreach (
-            Manager::getFiles($directory, $baseNamespace, $separator)
-            as $_file
-        ) {
-            Livewire::component(
-                $_file['kebab'],
-                $_file['namespace']
-            );
-        }
+        if (is_dir($directory)) {
 
-        foreach ([
-            'gridable-order' => \Hascha\BaseTheme\View\LiveFeatures\Gridable\Item::class,
-            'charts' => \Hascha\BaseTheme\View\LiveFeatures\Charts\Index::class,
-            'menu-hero' => \Hascha\BaseTheme\View\LiveFeatures\Menu\Hero\Index::class,
-        ] as $name => $class) {
-            Livewire::component(
-                $name,
-                $class
-            );
+            foreach (
+                Manager::getFiles($directory, $baseNamespace, $separator)
+                as $_file
+            ) {
+                Livewire::component(
+                    $_file['kebab'],
+                    $_file['namespace']
+                );
+            }
+    
+            foreach ([
+                'gridable-order' => \Hascha\BaseTheme\View\LiveFeatures\Gridable\Item::class,
+                'charts' => \Hascha\BaseTheme\View\LiveFeatures\Charts\Index::class,
+                'menu-hero' => \Hascha\BaseTheme\View\LiveFeatures\Menu\Hero\Index::class,
+            ] as $name => $class) {
+                Livewire::component(
+                    $name,
+                    $class
+                );
+            }
+
         }
     }
 
@@ -102,14 +106,18 @@ class Exists
      */
     public static function setPropertySynthesizer(string $directory, string $baseNamespace, string $separator = "")
     {
-        foreach (
-            Manager::getFiles($directory, $baseNamespace, $separator)
-            as $_file
-        ) {
-            Livewire::propertySynthesizer($_file['namespace']);
-            Relation::morphMap([
-                $_file['kebab'] => $_file['namespace'],
-            ]);
+        if (is_dir($directory)) {
+
+            foreach (
+                Manager::getFiles($directory, $baseNamespace, $separator)
+                as $_file
+            ) {
+                Livewire::propertySynthesizer($_file['namespace']);
+                Relation::morphMap([
+                    $_file['kebab'] => $_file['namespace'],
+                ]);
+            }
+            
         }
     }
 }

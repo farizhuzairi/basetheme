@@ -55,5 +55,5 @@
             "@php artisan basetheme:webmanifest || echo 'Failed'"
         ]
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
