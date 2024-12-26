@@ -37,13 +37,10 @@ Theme Model memiliki boot() method untuk menambahkan default data atau berbagai 
 
 #### Struktur Elemen HTML
 Theme Model dibangun berdasarkan html5 semantic yang pada akhirnya hanya akan menghasilkan kumpulan elemen utama (struktur elemen utama berada di dalam layout) terdiri dari:
-+ Header Element
-+ Body Element
-+ Footer Element
 
-``'element' => \Hascha\BaseTheme\Components\Elements\Header::class``
-``'element' => \Hascha\BaseTheme\Components\Elements\Body::class``
-``'element' => \Hascha\BaseTheme\Components\Elements\Footer::class``
++ Header Element ``'element' => \Hascha\BaseTheme\Components\Elements\Header::class``
++ Body Element ``'element' => \Hascha\BaseTheme\Components\Elements\Body::class``
++ Footer Element ``'element' => \Hascha\BaseTheme\Components\Elements\Footer::class``
 
 Berdasarkan tema tertentu yang digunakan, seperti Home Page, Authentication Page, Dashboard Panel Page, atau tema halaman lainnya, memungkinkan adanya penambahan elemen yang secara otomatis ditambahkan ke dalam struktur halaman sebagai sub-elemen:
 + Sidebar Element
@@ -59,18 +56,18 @@ Tersedia kelas facade yang secara spesifik menangani setiap sub-elemen yang bera
 **Dukungan fungsionalitas untuk menyuntikkan data ke dalam setiap elemen html.**
 Memanggil fungsi melalui Facade dan menyuntikkan kelas komponen fitur untuk dirender pada tampilan html.
 
-``Content::header()``
-``Content::topHeader()``
-``Content::subHeader()``
-``Content::main()``
-``Content::extra()``
-``Content::footer()``
-``Content::copyright()``
++ ``Content::header()``
++ ``Content::topHeader()``
++ ``Content::subHeader()``
++ ``Content::main()``
++ ``Content::extra()``
++ ``Content::footer()``
++ ``Content::copyright()``
 
 Referensi khusus untuk halaman yang menggunakan bilah samping (sidebar).
-``Sidebar::main()``
-``Sidebar::tab()``
-``Sidebar::headPanel()``
++ ``Sidebar::main()``
++ ``Sidebar::tab()``
++ ``Sidebar::headPanel()``
 
 #### Komponen Fitur (Feature Components)
 Ini adalah bagian utama untuk menghubungkan data ke dalam setiap komponen html secara dynamic dan reuseable. Dibangun berdasarkan kelas komponen blade yang diperluas dan menghasilkan data dengan cara yang sangat sederhana!
@@ -114,8 +111,10 @@ Menambahkan dependency di dalam file composer.json: _“haschamedia/basetheme”
 ### Membangun Halaman Dengan Model Tema (Theme Model)
 Artisan: _php artisan basetheme:model {className}_, ubah _className_ menjadi nama kelas relevan, misalnya **HomePage** sehingga menghasilkan file dalam direktori **app/Themes** dapat menampung segala yang dibutuhkan halaman.
 Panggil kelas model untuk menampilkan halaman penuh sebagai return value di dalam controller method.
-``use App\Themes\HomePage;``
-``return HomePage::make()->view();``
+
+```php
+return App\Themes\HomePage::make()->view();
+```
 
 _Gunakan Theme Model Class untuk satu atau beberapa halaman. Ini akan lebih menguntungkan karena hanya akan menyimpan lebih sedikit file utama untuk merender halaman antarmuka._
 
