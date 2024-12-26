@@ -1,6 +1,5 @@
 {
     "name": "farizhuzairi/basetheme",
-    "version": "dev-main",
     "type": "library",
     "description": "Tema Dasar Untuk Laravel Blade dan Komponen Menggunakan Tailwind CSS",
     "keywords": [
