@@ -1,7 +1,7 @@
 {
     "name": "farizhuzairi/basetheme",
     "type": "library",
-    "description": "Tema Dasar Untuk Laravel Blade dan Komponen Menggunakan Tailwind CSS",
+    "description": "Menyusun data secara dinamis ke dalam setiap halaman website menggunakan Tema Dasar yang dapat dikostumisasi dan diperluas.",
     "keywords": [
         "haschamedia",
         "basetheme",

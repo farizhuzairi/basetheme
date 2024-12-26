@@ -1,10 +1,22 @@
 # BASE THEME
 Menyusun data secara dinamis ke dalam setiap halaman website menggunakan Tema Dasar yang dapat dikostumisasi dan diperluas.
 
-_Sebagai catatan, saat ini Base Theme Package berada dalam versi pengembangan yang dirilis v1.0.0 sebagai versi alpha._
+> _Sebagai catatan, saat ini Base Theme Package berada dalam versi pengembangan yang dirilis v1.0.0 sebagai versi alpha._
 
+_____________________________________________________________
 ### Perkenalan
 BaseTheme dibangun untuk mendukung pengembangan aplikasi berbasis website agar lebih efektif dan efisien. Fokus pada pekerjaan utama membangun aplikasi yang kuat dan sesegera mungkin mengimplementasikan bisnis tanpa mengubah kata "Hello World!"
+
+```php
+public function index()
+{
+    // Mengatur judul halaman secara manual
+    baseTheme()->setPageTitle('My Page');
+    
+    // menghasilkan layout yang dirender sebagai antarmuka
+    return App\Themes\HomePage::make()->view();
+}
+```
 
 Dibangun menggunakan konsep dasar Kelas Komponen (Blade Component). Menjaga kesederhanaan dengan memperluas objek yang didorong oleh Livewire. Ini lebih sederhana untuk memulai dengan cepat dan praktis!
 
@@ -15,10 +27,13 @@ Setiap halaman atau tampilan selalu mereferensikan Kelas Model Tema (Theme Model
 
 Setiap Theme Model dapat digunakan untuk satu atau beberapa halaman terkait dengan kesamaan tema dasar yang sesuai atau disesuaikan melalui BaseTheme Facade. Sangat sederhana, namun menghasilkan objek dinamis untuk setiap halaman dalam pengelolaan Controller Class atau DTO (Data Transfer Object).
 
-#### Model Tema Halaman
+#### Model Tema Halaman (Theme Model)
 Seperti yang sudah disebutkan, setiap tema dapat digunakan sebanyak mungkin sesuai yang diperlukan tanpa perlu membuat model tema berulang. Setiap tema hanya akan dirender ke dalam satu layout yang siap digunakan.
 
-Theme Model memiliki boot() method untuk menambahkan default data atau objek yang akan dirender bersama untuk setiap tampilan dasar yang didefinisikan.
+``App\Themes\HomePage::class;``
+Ini adalah contoh kelas model tema yang mewarisi kelas Theme Model untuk halaman dasar aplikasi saya! Silakan menentukan nama kelas sendiri yang relevan dan unik.
+
+Theme Model memiliki boot() method untuk menambahkan default data atau berbagai fungsionalitas yang akan dirender bersama untuk setiap tampilan dasar yang didefinisikan.
 
 #### Struktur Elemen HTML
 Theme Model dibangun berdasarkan html5 semantic yang pada akhirnya hanya akan menghasilkan kumpulan elemen utama (struktur elemen utama berada di dalam layout) terdiri dari:
@@ -26,9 +41,64 @@ Theme Model dibangun berdasarkan html5 semantic yang pada akhirnya hanya akan me
 + Body Element
 + Footer Element
 
+``'element' => \Hascha\BaseTheme\Components\Elements\Header::class``
+``'element' => \Hascha\BaseTheme\Components\Elements\Body::class``
+``'element' => \Hascha\BaseTheme\Components\Elements\Footer::class``
+
 Berdasarkan tema tertentu yang digunakan, seperti Home Page, Authentication Page, Dashboard Panel Page, atau tema halaman lainnya, memungkinkan adanya penambahan elemen yang secara otomatis ditambahkan ke dalam struktur halaman sebagai sub-elemen:
 + Sidebar Element
 + Main Content Element
+
+#### Mengirim Data Menggunakan Fungsi
+Data Compiler Service hanyalah kelas facade biasa yang menyediakan fungsionalitas sebagai penghubung untuk meneruskan data yang akan ditampilkan di halaman aplikasi.
+
+Tersedia kelas facade yang secara spesifik menangani setiap sub-elemen yang berada dalam elemen utama layout.
++ Content Facade (Layanan Penyusun Data Utama)
++ Sidebar Facade (Layanan Penyusun Data Bilah Halaman)
+
+**Dukungan fungsionalitas untuk menyuntikkan data ke dalam setiap elemen html.**
+Memanggil fungsi melalui Facade dan menyuntikkan kelas komponen fitur untuk dirender pada tampilan html.
+
+``Content::header()``
+``Content::topHeader()``
+``Content::subHeader()``
+``Content::main()``
+``Content::extra()``
+``Content::footer()``
+``Content::copyright()``
+
+Referensi khusus untuk halaman yang menggunakan bilah samping (sidebar).
+``Sidebar::main()``
+``Sidebar::tab()``
+``Sidebar::headPanel()``
+
+#### Komponen Fitur (Feature Components)
+Ini adalah bagian utama untuk menghubungkan data ke dalam setiap komponen html secara dynamic dan reuseable. Dibangun berdasarkan kelas komponen blade yang diperluas dan menghasilkan data dengan cara yang sangat sederhana!
+
+Kelas Komponen Fitur menyediakan berbagai fungsionalitas yang dapat mengimplementasikan logika bisnis secara dinamis dan dapat dikendalikan secara penuh.
+
+##### Kelas Komponen Fitur
+Kelas Komponen Fitur merupakan turunan dari kelas komponen blade itu sendiri yang hanya berisi properti dan fungsi untuk menampilkan data berdasarkan logika yang disesuaikan.
+
+Seperti penggunaan Sidebar Menu sebagai komponen fitur untuk menampilkan daftar menu bilah samping dengan cara yang sangat mudah dan sederhana:
+
+```php
+use Hascha\BaseTheme\Facade\Features\Sidebar;
+use Hascha\BaseTheme\Components\Features\SideMenu;
+
+Sidebar::main(SideMenu::class, function ($component) {
+    return $component
+    ->addMenu('Home', route('home'));
+    ->addMenu('About', route('about'));
+    ->addMenu('Products', function($dropdown) {
+        $dropdown
+        ->subMenu('Home Sweet', route('product.home-sweet'))
+        ->subMenu('Tools', route('product.tools'));
+    });
+});
+```
+
+Terdapat banyak sekali Komponen Fitur yang siap digunakan. Dan Anda selalu dapat menambahkan Komponen Fitur Kustom sesuai kebutuhan aplikasi Anda!
 
 _____________________________________________________________
 ## PERSIAPAN
