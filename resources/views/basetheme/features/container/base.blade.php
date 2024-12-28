@@ -1,14 +1,21 @@
 @props([
-    'css' => null
+    'css' => null,
+    'withPadding' => true
 ])
+@php
+$basePadding = "";
+if($withPadding) {
+    $basePadding .= " base-container";
+}
+@endphp
 <div {{
-    $attributes->merge(['class' => $attributes->prepends('base-container py-8')])
+    $attributes->merge(['class' => $attributes->prepends('py-8' . $basePadding)])
     ->merge([
         'class' => $css
     ])
 }}>
     @if($subject || $introduction)
-    <x-base::title :withBorder="false">
+    <x-base::title :withBorder="false" :class="!$withPadding ? 'base-container' : ''">
         <x-slot:title>{{ $subject }}</x-slot:title>
         <x-slot:description>{{ $introduction }}</x-slot:description>
     </x-base::title>

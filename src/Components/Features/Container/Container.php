@@ -21,6 +21,7 @@ class Container extends BaseComponent implements Componentable, FeatureableCompo
     SetViewComponent;
 
     protected ?string $css = null;
+    protected bool $withPadding = true;
 
     /**
      * @return void
@@ -37,7 +38,8 @@ class Container extends BaseComponent implements Componentable, FeatureableCompo
     protected function features(array $data = [])
     {
         return [
-            'css' => $this->css ?? ''
+            'css' => $this->css,
+            'withPadding' => $this->withPadding,
         ];
     }
 
@@ -72,6 +74,16 @@ class Container extends BaseComponent implements Componentable, FeatureableCompo
     public function css(string $css)
     {
         $this->css = $css;
+        return $this;
+    }
+
+    /**
+     * With Padding (Base Container)
+     * @return static
+     */
+    public function withPadding(bool $withPadding = true)
+    {
+        $this->withPadding = $withPadding;
         return $this;
     }
 }

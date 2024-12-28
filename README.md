@@ -118,12 +118,53 @@ return App\Themes\HomePage::make()->view();
 
 _Gunakan Theme Model Class untuk satu atau beberapa halaman. Ini akan lebih menguntungkan karena hanya akan menyimpan lebih sedikit file utama untuk merender halaman antarmuka._
 
+#### Mengubah Warna Tema Default Secara Global
+Melalui Layanan Penyedia: ``baseTheme()->theme('soft');``
++ soft
++ basethick
+
+#### Konfigurasi Halaman
+Umumnya, konfigurasi halaman ditempatkan pada layanan penyedia agar dapat berlaku secara global. Namun, kelas Controller adalah alternatif untuk kebutuhan spesifik setiap halaman.
++ Atur nama brand, logo dan icon: ``themeConfig()->setBrands(name: string, logo: string, icon: ?string);``
+
+#### Mendefinisikan Elemen Html (Secara Manual)
+Secara default, semua element yang diperlukan akan dirender secara otomatis berdasarkan tipe halaman yang digunakan. Namun, Anda dapat secara manual mendefinisikan sendiri element dari suatu halaman (page) yang akan dirender melalui kelas Controller (halaman spesifik) atau Layanan Penyedia (jika bersifat Global).
+``BaseTheme::element(\HaschaMedia\BaseTheme\Components\Elements\Header::class, ['headline' => 'My Page']);``
+
+Atau, jika Anda perlu merender banyak element sekaligus melalui kelas model tema maka gunakan withElements() method seperti berikut:
+
+```php
+protected function withElements()
+{
+    return [
+        [
+            'element' => \HaschaMedia\BaseTheme\Components\Elements\Header::class,
+            'attributes' => [
+                'theme' => $this->theme
+            ]
+        ],
+        [
+            'element' => \HaschaMedia\BaseTheme\Components\Elements\Body::class,
+            'attributes' => []
+        ],
+        [
+            'element' => \HaschaMedia\BaseTheme\Components\Elements\Footer::class,
+            'attributes' => []
+        ],
+    ];
+}
+```
+
 _____________________________________________________________
-## THEME
-Pilihan tema yang dapat digunakan.
+## THEMES
+
+### Tema Halaman
+Pilihan tema halaman default siap digunakan.
 + Home Page (theme::page)
 + Dashboard Panel (theme::panel)
 + Authentication Page (theme::auth)
+
+> Melalui perintah artisan: `php artisan basetheme:model MyPage`
 
 Menentukan tema di dalam kelas model tema (Theme Model Class):
 ```php

@@ -24,11 +24,10 @@ class CreateNewPage extends Command
             File::makeDirectory($directory, 0755, true);
         }
 
-        // $stubPath = __DIR__.'/../../../stubs/basetheme-model.stub';
         $stubPath = base_path('vendor/farizhuzairi/basetheme/stubs/basetheme-model.stub');
         if (!$stubPath || !File::exists($stubPath)) {
             $this->error("Stub file does not exist at path $stubPath.");
-            return;
+            return 1;
         }
 
         $stubContent = File::get($stubPath);
@@ -40,6 +39,6 @@ class CreateNewPage extends Command
         File::put($filePath, $content);
 
         $this->info("Class $className created successfully in $directory.");
-        return Command::SUCCESS;
+        return 0;
     }
 }
