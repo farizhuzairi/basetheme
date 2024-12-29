@@ -25,6 +25,9 @@ if($bgImage) {
         </div>
         @endif
         <p class="{{ empty($introduction) ? 'hidden' : '' }}">{{ $introduction }}</p>
+        <x-base::card.content
+        :$contents
+        />
         <x-base::galleries/>
     </div>
 </div>
