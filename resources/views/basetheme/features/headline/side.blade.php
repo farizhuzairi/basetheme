@@ -1,4 +1,4 @@
-<div {{ $attributes }}>
+<div {{ $attributes->merge(['class' => $attributes->prepends(empty($subject) && empty($introduction) ? ' hidden' : '')]) }}>
     <div class="px-4 mb-1">
         <livewire:nav-brand css="px-4" :key="liveKey(($headTitle ?? 'empty'), 'side_')"
         :brandMenu="$headTitle ?? null"
