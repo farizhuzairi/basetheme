@@ -1,7 +1,7 @@
 # BASE THEME
 Menyusun data secara dinamis ke dalam setiap halaman website menggunakan Tema Dasar yang dapat dikostumisasi dan diperluas.
 
-> _Sebagai catatan, saat ini Base Theme Package berada dalam versi pengembangan yang dirilis v1.0.0 sebagai versi alpha._
+> _Saat ini Base Theme Package berada dalam versi pengembangan yang dirilis v1.0.0 sebagai versi alpha._
 
 _____________________________________________________________
 ## Introduction

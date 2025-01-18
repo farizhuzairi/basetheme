@@ -3,6 +3,7 @@
 @import "tailwindcss/base";
 @import "./scrollbar.css";
 @import "./reset.css";
+@import "./base-fontable.css";
 @import "./base-buttons.css";
 
 @import "tailwindcss/components";

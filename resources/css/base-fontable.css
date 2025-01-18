@@ -1,0 +1,13 @@
+@layer base {
+
+    .basefont-primary, .font-primary {
+        @apply
+        font-sans;
+    }
+
+    .basefont-price {
+        @apply
+        font-titillium;
+    }
+    
+}

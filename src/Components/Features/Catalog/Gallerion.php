@@ -22,6 +22,7 @@ class Gallerion extends BaseComponent implements Componentable, FeatureableCompo
 
     protected array $properties = [];
     protected array $items = [];
+    protected array $labels = [];
 
     /**
      * Features
@@ -55,6 +56,52 @@ class Gallerion extends BaseComponent implements Componentable, FeatureableCompo
     public function typeOfGallerion()
     {
         $this->setAsViewComponent(__FUNCTION__);
+        return $this;
+    }
+
+    /**
+     * gallery contents
+     * @return static
+     */
+    public function item(
+        string $image,
+        string $title,
+        string $url = '#',
+        ?string $introduction = null,
+        ?Closure $labels = null
+    )
+    {
+        if($labels instanceof Closure) {
+            $labels = $labels($this);
+        }
+
+        $this->items[] = [
+            'image' => $image,
+            'title' => $title,
+            'url' => $url,
+            'introduction' => $introduction,
+            'labels' => $this->labels
+        ];
+
+        // resets
+        $this->labels = [];
+
+        // return
+        return $this;
+    }
+
+    /**
+     * gallery contents
+     * @return static
+     */
+    public function label(string $title, string|int|bool $label, ?string $icon = null)
+    {
+        $this->labels[] = [
+            'title' => $title,
+            'label' => $label,
+            'icon' => $icon
+        ];
+
         return $this;
     }
 }

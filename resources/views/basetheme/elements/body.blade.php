@@ -7,9 +7,9 @@
         echo e($i);
     }
     @endphp
-    <x-base-component::superior/>
-    {{-- <x-base::jumbotron.index/> --}}
-    <x-base-component::base-catalog/>
+    {{-- <x-base-component::superior/>
+    <x-base::jumbotron.index/>
+    <x-base-component::base-catalog/> --}}
     @endif
 
     @if(request()->routeIs('dev.basetheme'))

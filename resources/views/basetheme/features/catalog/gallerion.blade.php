@@ -11,7 +11,7 @@ if($bgImage) {
 }
 @endphp
 
-<div id="hero" {{
+<div {{
     $attributes->merge(['class' => $attributes->prepends('bg-c-dark dark:bg-c-dark-thick text-c-light-thin bg-no-repeat bg-cover bg-center shadow')])
     ->merge([
         "style" => $style
@@ -24,10 +24,10 @@ if($bgImage) {
             @if(isset($subTitle))<span class="text-sm text-slate-400">{{ $subTitle }}</span>@endif
         </div>
         @endif
-        <p class="{{ empty($introduction) ? 'hidden' : '' }}">{{ $introduction }}</p>
+        <p class="{{ empty($introduction) ? 'hidden' : 'text-sm' }}">{{ $introduction }}</p>
         <x-base::card.content
         :$contents
         />
-        <x-base::galleries/>
+        <x-base::catalog.galleries :items="$items"/>
     </div>
 </div>
