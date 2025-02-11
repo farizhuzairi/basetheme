@@ -5,6 +5,7 @@ namespace Hascha\BaseTheme\Components\Features\Catalog;
 use Closure;
 use Hascha\BaseTheme\Traits\Explained;
 use Hascha\BaseTheme\Features\Traits\Featureable;
+use Hascha\BaseTheme\Features\Traits\WithClasses;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
 use Hascha\BaseTheme\Features\Traits\FeatureableContent;
@@ -18,7 +19,8 @@ class Gallerion extends BaseComponent implements Componentable, FeatureableCompo
     Featureable,
     FeatureableContent,
     FeatureableSubject,
-    SetViewComponent;
+    SetViewComponent,
+    WithClasses;
 
     protected array $properties = [];
     protected array $items = [];

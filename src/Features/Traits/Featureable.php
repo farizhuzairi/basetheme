@@ -38,6 +38,11 @@ trait Featureable
     protected function featureables(array $data = [])
     {
         $results = $data;
+
+        if(property_exists($this, 'classes')) {
+            $results = array_merge($results, ['class' => $this->classes]); // add style class
+            $results = array_merge($results, $this->classVars); // class name vars
+        }
         
         if(method_exists($this, "features")) {
             $results = array_merge($results, $this->features($data));

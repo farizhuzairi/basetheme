@@ -28,12 +28,12 @@
             <x-buttons::index x-on:click="userTab = ! userTab"
             :icon="'hascha-user-circle-1'"
             />
-            <div x-show="userTab" x-cloak x-transition x-on:click.away="userTab = false" class="absolute bg-c-light-thin text-c-text border border-c-border font-sub-menu right-0 w-52 rounded shadow-lg z-50">
+            <div x-show="userTab" x-cloak x-transition x-on:click.away="userTab = false" class="absolute bg-c-light-thin text-sm text-c-text border border-c-border font-sub-menu right-0 w-52 rounded shadow-lg z-50">
                 <ul class="divide-y divide-c-light">
                     <li>
                         <a href="" class="block px-3 py-2 leading-4 hover:bg-c-light first:rounded-t">
-                            <span class="block text-sm font-light">{{ Auth::user()->email }}</span>
-                            <span class="font-primary">{{ Auth::user()->name }}</span>
+                            <span class="block text-xs font-light">{{ Auth::user()->email }}</span>
+                            <span class="font-primary font-semibold tracking-wide">{{ Auth::user()->name }}</span>
                         </a>
                     </li>
                     <li>

@@ -161,7 +161,6 @@ trait Renderable
         if(! $this->container) {
             $dataCompacts = [];
         }
-        if($this->__getClassName() === 'menu-hero') dd($this);
         return view($__component, $dataCompacts);
     }
 }

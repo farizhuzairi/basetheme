@@ -1,5 +1,5 @@
 <div class="h-screen max-w-7xl mx-auto flex flex-col items-center justify-center" x-data="{ flexi: true }" x-cloak>
-    <div class="grid grid-cols-12 gap-0 h-[100vh]">
+    <div class="grid grid-cols-12 gap-0 h-screen">
         <div :class="flexi ? 'col-span-12 md:col-span-6 lg:col-span-7 flex relative' : 'hidden'">
 
             <div class="relative h-screen w-full md:h-auto" x-data="{ tab: false }">
@@ -42,8 +42,8 @@
                 <x-base::buttons.reset x-on:click="flexi = ! flexi" class="bg-white px-1.5 py-0.5 rounded-s"><span class="hascha-first_page"></span></x-base::buttons.reset>
             </div>
         </div>
-        <div :class="flexi ? 'col-span-12 md:col-span-6 lg:col-span-5' : 'col-span-12 relative'" class="bg-white text-c-dark flex items-center h-screen">
-            <div class="md:h-auto md:overflow-y-auto mx-4 lg:mx-8 my-5 base-padding border-e-4 border-primary/25">
+        <div :class="flexi ? 'col-span-12 md:col-span-6 lg:col-span-5' : 'col-span-12 relative'" class="bg-white text-c-dark flex items-center">
+            <div class="mx-4 lg:mx-8 my-5 base-padding border-e-4 border-primary/25">
                 @php echo e($__content['header']); @endphp
                 <div class="lg:py-5">
                 @php echo e($__content['body']); @endphp

@@ -61,7 +61,12 @@ abstract class BaseComponent extends Component
      * @return void
      */
     protected function construction(ThemeService $service)
-    {}
+    {
+        // menentukan komponen default
+        if(method_exists($this, 'setAsViewComponent') && method_exists($this, 'setViewComponentDefault')) {
+            $this->setAsViewComponent($this->setViewComponentDefault());
+        }
+    }
 
     /**
      * requirement setup,

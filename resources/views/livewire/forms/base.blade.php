@@ -1,4 +1,8 @@
-<x-base::form name="{{ $name }}" method="{{ $method }}" wire:submit="submit">
+<x-base::form
+name="{{ $name }}"
+method="{{ $method }}"
+wire:submit="submit"
+>
 @foreach($form->attributes as $name => $form)
 @if($form['type'] === 'submit')
 <x-dynamic-component :component="$form['form']" :key="liveKey($form['name'], $name)"

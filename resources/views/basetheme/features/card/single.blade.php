@@ -1,5 +1,5 @@
-<div {{ $attributes->merge(['class' => $attributes->prepends('px-4 lg:px-8')]) }}>
-    <x-base::card :topBorder="$topBorder">
+<div {{ $attributes->merge(['class' => $attributes->prepends('')]) }}>
+    <x-base::card :topBorder="$topBorder" :class="$class">
         <x-base::card.body>
             <x-base::subject
             :subject="$subject ?? null"

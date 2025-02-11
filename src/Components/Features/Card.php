@@ -5,6 +5,7 @@ namespace Hascha\BaseTheme\Components\Features;
 use Closure;
 use Hascha\BaseTheme\Traits\Explained;
 use Hascha\BaseTheme\Features\Traits\Featureable;
+use Hascha\BaseTheme\Features\Traits\WithClasses;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
 use Hascha\BaseTheme\Features\Traits\FeatureableContent;
@@ -18,7 +19,8 @@ class Card extends BaseComponent implements Componentable, FeatureableComponent
     Featureable,
     FeatureableContent,
     FeatureableSubject,
-    SetViewComponent;
+    SetViewComponent,
+    WithClasses;
 
     /**
      * card objects
@@ -49,6 +51,7 @@ class Card extends BaseComponent implements Componentable, FeatureableComponent
      */
     protected function setViewComponentDefault()
     {
+        $this->properties['topBorder'] = null;
         return "single";
     }
 

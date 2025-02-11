@@ -28,6 +28,6 @@ if($bgImage) {
         <x-base::card.content
         :$contents
         />
-        <x-base::catalog.galleries :items="$items"/>
+        <x-base::catalog.galleries :items="$items" :withBox="$withBox" :boxColor="$boxColor"/>
     </div>
 </div>

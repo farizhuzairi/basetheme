@@ -12,10 +12,10 @@ trait SetViewComponent
      * Override untuk mengatur komponen default.
      * @return string
      */
-    protected function setViewComponentDefault()
-    {
-        return "empty";
-    }
+    // protected function setViewComponentDefault()
+    // {
+    //     return "empty";
+    // }
 
     /**
      * set type of
@@ -24,7 +24,8 @@ trait SetViewComponent
     protected function typeOf(?string $component)
     {
         $this->__setBase($component, function($blade) {
-            return empty($blade) ? $this->setViewComponentDefault() : $blade;
+            $setViewComponentDefault = method_exists($this, 'setViewComponentDefault') ? $this->setViewComponentDefault() : 'empty';
+            return empty($blade) ? $setViewComponentDefault : $blade;
         });
 
         return $this;

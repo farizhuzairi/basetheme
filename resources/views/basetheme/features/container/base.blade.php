@@ -1,5 +1,5 @@
 @props([
-    'css' => null,
+    'class' => null,
     'withPadding' => true
 ])
 @php
@@ -11,7 +11,7 @@ if($withPadding) {
 <div {{
     $attributes->merge(['class' => $attributes->prepends('py-8' . $basePadding)])
     ->merge([
-        'class' => $css
+        'class' => $class
     ])
 }}>
     @if($subject || $introduction)
