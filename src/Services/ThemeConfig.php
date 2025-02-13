@@ -58,10 +58,11 @@ class ThemeConfig
 
     public function setBrands(?string $name = null, ?string $logo = null, ?string $icon = null): static
     {
+        $attrs = static::$config->getConfig('attributes');
         $this->brands = [
             'name' => (empty($name) ? config('app.name') : $name),
-            'logo' => (empty($logo) ? asset('icons/android-chrome-512x512.png') : $logo),
-            'icon' => (empty($logo) ? asset('icons/android-chrome-512x512.png') : $logo),
+            'logo' => (empty($logo) ? $attrs['logo'] : $logo),
+            'icon' => (empty($logo) ? $attrs['icon'] : $logo),
         ];
         return $this;
     }
@@ -83,29 +84,51 @@ class ThemeConfig
 
     public function defaultManifest(): string
     {
-        $icon = asset("icons/apple-touch-icon.png");
-        $icon1 = asset("icons/favicon-32x32.png");
-        $icon2 = asset("icons/favicon-16x16.png");
-        $webmanifestJson = asset("icons/site.webmanifest");
+        $manifest = static::$config->getConfig('manifest');
+        $_fav = '';
 
-        return '<link rel="apple-touch-icon" sizes="180x180" href="' . $icon .'"><link rel="icon" type="image/png" sizes="32x32" href="' . $icon1 .'"><link rel="icon" type="image/png" sizes="16x16" href="' . $icon2 .'"><link rel="manifest" href="' . $webmanifestJson .'">';
-    }
-    
-    public function defaultCss(): string
-    {
-        $_css = '<link href="' . asset('basetheme/css/styles.css') . '" rel="stylesheet" type="text/css"><link href="' . asset('basetheme/css/main.css') . '" rel="stylesheet" type="text/css">';
-        return  $this->fromCDN() . $_css;
+        foreach($manifest as $i) {
+            $_fav .= $i;
+        }
+
+        return $_fav;
     }
 
     protected function fromCDN(): string
     {
-        $withCDN = static::$config->getConfig('tailwind', ['cdn']);
-        return $withCDN ? '<script src="https://cdn.tailwindcss.com"></script>' : '';
+        $tailwind = static::$config->getConfig('tailwind');
+
+        if(is_array($tailwind)) {
+            $withCDN = $tailwind['cdn'];
+            return $withCDN ? $tailwind['url'] : '';
+        }
+
+        return '';
+    }
+    
+    public function defaultCss(): string
+    {
+        $stylesheets = static::$config->getConfig('stylesheets');
+        $_css = $this->fromCDN();
+
+        foreach($stylesheets as $i) {
+            $_css .= $i;
+        }
+
+        return $_css;
+
     }
 
     public function defaultJs(): string
     {
-        return '<script src="' . asset('basetheme/js/main.js') . '"></script>';
+        $javascripts = static::$config->getConfig('javascripts');
+        $_js = '';
+        
+        foreach($javascripts as $i) {
+            $_js .= $i;
+        }
+
+        return $_js;
     }
 
     public function __call(string $method, mixed $arguments)

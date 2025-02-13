@@ -17,11 +17,49 @@ return [
     'default_layout' => 'layout',
 
     /**
-     * with CDN Tailwind
+     * Web Attributes
+     * 
+     */
+    'attributes' => [
+        'logo' => asset('icons/android-chrome-512x512.png'),
+        'icon' => asset('icons/android-chrome-512x512.png'),
+    ],
+
+    /**
+     * Web Manifest | Favicon
+     * 
+     */
+    'manifest' => [
+        'icon1' => '<link rel="apple-touch-icon" sizes="180x180" href="' . asset("icons/apple-touch-icon.png") .'">',
+        'icon2' => '<link rel="icon" type="image/png" sizes="32x32" href="' . asset("icons/favicon-32x32.png") .'">',
+        'icon3' => '<link rel="icon" type="image/png" sizes="16x16" href="' . asset("icons/favicon-16x16.png") .'">',
+        'json' => '<link rel="manifest" href="' . asset("icons/site.webmanifest") .'">',
+    ],
+
+    /**
+     * Stylesheets
+     * 
+     */
+    'stylesheets' => [
+        '<link href="' . asset('basetheme/css/styles.css') . '" rel="stylesheet" type="text/css">',
+        '<link href="' . asset('basetheme/css/main.css') . '" rel="stylesheet" type="text/css">'
+    ],
+
+    /**
+     * Javascripts
+     * 
+     */
+    'javascripts' => [
+        '<script src="' . asset('basetheme/js/main.js') . '"></script>'
+    ],
+
+    /**
+     * Use Tailwind CSS
      * 
      */
     'tailwind' => [
-        'cdn' => env('TAILWIND_CDN', false)
+        'cdn' => env('TAILWIND_CDN', false),
+        'url' => '<script src="https://cdn.tailwindcss.com"></script>'
     ],
 
     /**
