@@ -38,6 +38,10 @@ trait Featureable
     protected function featureables(array $data = [])
     {
         $results = $data;
+        
+        if(method_exists($this, "useBadgeInformation")) {
+            $results = array_merge($results, $this->useBadgeInformation());
+        }
 
         if(property_exists($this, 'classes')) {
             $results = array_merge($results, ['class' => $this->classes]); // add style class

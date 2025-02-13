@@ -17,6 +17,14 @@ return [
     'default_layout' => 'layout',
 
     /**
+     * with CDN Tailwind
+     * 
+     */
+    'tailwind' => [
+        'cdn' => env('TAILWIND_CDN', false)
+    ],
+
+    /**
      * Default Html Element
      * 
      */

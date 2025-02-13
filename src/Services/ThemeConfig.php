@@ -93,7 +93,14 @@ class ThemeConfig
     
     public function defaultCss(): string
     {
-        return '<link href="' . asset('basetheme/css/styles.css') . '" rel="stylesheet" type="text/css"><link href="' . asset('basetheme/css/main.css') . '" rel="stylesheet" type="text/css">';
+        $_css = '<link href="' . asset('basetheme/css/styles.css') . '" rel="stylesheet" type="text/css"><link href="' . asset('basetheme/css/main.css') . '" rel="stylesheet" type="text/css">';
+        return  $this->fromCDN() . $_css;
+    }
+
+    protected function fromCDN(): string
+    {
+        $withCDN = static::$config->getConfig('tailwind', ['cdn']);
+        return $withCDN ? '<script src="https://cdn.tailwindcss.com"></script>' : '';
     }
 
     public function defaultJs(): string
