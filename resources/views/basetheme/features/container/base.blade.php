@@ -9,7 +9,7 @@ if($withPadding) {
 }
 @endphp
 <div {{
-    $attributes->merge(['class' => $attributes->prepends('py-8' . $basePadding)])
+    $attributes->merge(['class' => $attributes->prepends($basePadding)])
     ->merge([
         'class' => $class,
         'style' => $style

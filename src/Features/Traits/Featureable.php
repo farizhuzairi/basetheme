@@ -43,11 +43,11 @@ trait Featureable
             $results = array_merge($results, $this->useBadgeInformation());
         }
 
-        if(property_exists($this, 'classes')) {
+        if(method_exists($this, 'classes')) {
             $results = array_merge($results, [
                 'class' => $this->classes,
                 'contentClass' => $this->contentClasses
-            ]); // add style classes
+            ]);
             $results = array_merge($results, $this->classVars); // class name vars
         }
 
@@ -55,7 +55,14 @@ trait Featureable
             $results = array_merge($results, [
                 'style' => $this->stylesheets,
                 'contentStyle' => $this->contentStylesheets
-            ]); // add stylesheets
+            ]);
+        }
+
+        if(method_exists($this, 'background')) {
+            $results = array_merge($results, [
+                'bgImage' => $this->bgImage,
+                'bgStyle' => $this->bgStyle
+            ]);
         }
         
         if(method_exists($this, "features")) {

@@ -7,6 +7,7 @@ use Hascha\BaseTheme\Traits\Explained;
 use Hascha\BaseTheme\Features\Traits\WithBadge;
 use Hascha\BaseTheme\Features\Traits\Featureable;
 use Hascha\BaseTheme\Features\Traits\WithClasses;
+use Hascha\BaseTheme\Features\Traits\WithBackground;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
 use Hascha\BaseTheme\Features\Traits\FeatureableContent;
@@ -22,7 +23,8 @@ class Gallerion extends BaseComponent implements Componentable, FeatureableCompo
     FeatureableSubject,
     SetViewComponent,
     WithClasses,
-    WithBadge;
+    WithBadge,
+    WithBackground;
 
     protected array $properties = [];
     protected array $items = [];
@@ -106,17 +108,6 @@ class Gallerion extends BaseComponent implements Componentable, FeatureableCompo
             'icon' => $icon
         ];
 
-        return $this;
-    }
-
-    /**
-     * Background Style
-     * @return static
-     */
-    public function background(string $image, string $style = '')
-    {
-        $this->properties['bgImage'] = $image;
-        $this->properties['bgStyle'] = $style;
         return $this;
     }
 }

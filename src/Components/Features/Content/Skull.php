@@ -4,6 +4,7 @@ namespace Hascha\BaseTheme\Components\Features\Content;
 
 use Hascha\BaseTheme\Traits\Explained;
 use Hascha\BaseTheme\Features\Traits\Featureable;
+use Hascha\BaseTheme\Features\Traits\WithClasses;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
 use Hascha\BaseTheme\Features\Traits\FeatureableContent;
@@ -17,7 +18,8 @@ class Skull extends BaseComponent implements Componentable, FeatureableComponent
     Featureable,
     FeatureableSubject,
     FeatureableContent,
-    SetViewComponent;
+    SetViewComponent,
+    WithClasses;
 
     /**
      * Data objects
