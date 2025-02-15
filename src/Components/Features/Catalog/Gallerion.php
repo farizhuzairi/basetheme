@@ -108,4 +108,15 @@ class Gallerion extends BaseComponent implements Componentable, FeatureableCompo
 
         return $this;
     }
+
+    /**
+     * Background Style
+     * @return static
+     */
+    public function background(string $image, string $style = '')
+    {
+        $this->properties['bgImage'] = $image;
+        $this->properties['bgStyle'] = $style;
+        return $this;
+    }
 }

@@ -1,8 +1,7 @@
-@props([
-    'items' => [],
-    'withBox' => true,
-    'boxColor' => null
-])
+@props(__props_class([
+    'items' => []
+]))
+
 @php
 $box = '';
 if($withBox) {
@@ -29,13 +28,13 @@ if($withBox) {
 }}>
     @foreach($items as $key => $item)
     <li class="{{ $box }}">
-        <div class="bg-c-light rounded hover:scale-105 transition-all">
+        <div class="bg-c-light rounded shadow hover:scale-105 transition-all">
             <a href="{{ $item['url'] }}">
                 <img src="{{ $item['image'] }}" alt="{{ 'gallery image: ' . $item['title'] }}" class="rounded">
             </a>
         </div>
-        <div class="mt-1">
-            <h5 class="font-menu font-semibold">
+        <div class="mt-1 bg-c-dark-thick px-2 py-3 rounded shadow text-c-text-light">
+            <h5 class="font-menu text-c-light-thin hover:text-c-light transition-all">
                 <a href="{{ $item['url'] }}">{{ $item['title'] }}</a>
             </h5>
             @if($item['introduction'])<p class="text-xs">{{ $item['introduction'] }}</p>@endif

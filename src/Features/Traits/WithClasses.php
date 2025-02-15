@@ -13,9 +13,35 @@ trait WithClasses
      */
     protected ?string $classes = null;
 
-    public function classes(string $classes)
+    /**
+     * Add Style Content Class
+     * @var string|null
+     */
+    protected ?string $contentClasses = null;
+
+    /**
+     * Add Stylesheets
+     * @var string|null
+     */
+    protected ?string $stylesheets = null;
+
+    /**
+     * Add Content Stylesheets
+     * @var string|null
+     */
+    protected ?string $contentStylesheets = null;
+
+    public function classes(string $classes, ?string $contentClasses = null)
     {
         $this->classes = (string) $classes;
+        $this->contentClasses = (string) $contentClasses;
+        return $this;
+    }
+
+    public function style(string $style, ?string $contentStylesheets = null)
+    {
+        $this->stylesheets = (string) $style;
+        $this->contentStylesheets = (string) $contentStylesheets;
         return $this;
     }
 

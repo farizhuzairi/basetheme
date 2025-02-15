@@ -9,6 +9,10 @@ Container's
     .base-padding {
         @apply px-4 lg:px-8;
     }
+
+    .base-div {
+        @apply max-w-7xl mx-auto;
+    }
     
     .base-container {
         @apply max-w-7xl mx-auto

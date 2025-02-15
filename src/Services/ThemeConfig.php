@@ -94,9 +94,14 @@ class ThemeConfig
         return $_fav;
     }
 
+    private function cssFramework(): string
+    {
+        return static::$config->getConfig('cssFramework') ?? '';
+    }
+
     protected function fromCDN(): string
     {
-        $tailwind = static::$config->getConfig('tailwind');
+        $tailwind = static::$config->getConfig('css', [$this->cssFramework()]);
 
         if(is_array($tailwind)) {
             $withCDN = $tailwind['cdn'];

@@ -1,3 +1,8 @@
+@props([
+    '__notifications' => null,
+    '__userMenu' => null
+])
+
 <div {{
     $attributes->merge(['class' => $attributes->prepends('py-3 flex justify-between md:grid md:grid-cols-12 gap-1 md:gap-0')])
 }}>

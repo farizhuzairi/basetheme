@@ -44,8 +44,18 @@ trait Featureable
         }
 
         if(property_exists($this, 'classes')) {
-            $results = array_merge($results, ['class' => $this->classes]); // add style class
+            $results = array_merge($results, [
+                'class' => $this->classes,
+                'contentClass' => $this->contentClasses
+            ]); // add style classes
             $results = array_merge($results, $this->classVars); // class name vars
+        }
+
+        if(property_exists($this, 'style')) {
+            $results = array_merge($results, [
+                'style' => $this->stylesheets,
+                'contentStyle' => $this->contentStylesheets
+            ]); // add stylesheets
         }
         
         if(method_exists($this, "features")) {

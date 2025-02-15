@@ -4,11 +4,10 @@ namespace Hascha\BaseTheme\Components\Features\Headline;
 
 use Illuminate\Support\Collection;
 use Hascha\BaseTheme\Traits\Explained;
-use Hascha\BaseTheme\Services\ThemeService;
 use Hascha\BaseTheme\Features\Traits\Featureable;
+use Hascha\BaseTheme\Features\Traits\WithClasses;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
-use Hascha\BaseTheme\Features\Traits\FeatureableContent;
 use Hascha\BaseTheme\Features\Traits\FeatureableSubject;
 use Hascha\BaseTheme\Traits\Components\SetViewComponent;
 use Hascha\BaseTheme\Contracts\Component\FeatureableComponent;
@@ -19,15 +18,26 @@ class Headline extends BaseComponent implements Componentable, FeatureableCompon
     Featureable,
     FeatureableSubject,
     SetViewComponent,
-    FeatureableContent;
+    WithClasses;
 
     // Data Objects
     protected array $properties = [];
     protected array $buttons = [];
-    
-    protected function construction(ThemeService $service)
+
+    /**
+     * Features
+     * @return array
+     */
+    protected function features(array $data = [])
     {
-        $this->typeOfBiggest();
+        return array_merge($this->properties, [
+            'buttons' => $this->buttons,
+        ]);
+    }
+
+    public function baseComponent(): string
+    {
+        return "base::basetheme.features.headline.";
     }
 
     /**
@@ -36,7 +46,7 @@ class Headline extends BaseComponent implements Componentable, FeatureableCompon
      */
     protected function setViewComponentDefault()
     {
-        return "side";
+        return "biggest";
     }
 
     /**
@@ -69,20 +79,14 @@ class Headline extends BaseComponent implements Componentable, FeatureableCompon
         return $this;
     }
 
-    public function baseComponent(): string
-    {
-        return "base::basetheme.features.headline.";
-    }
-
     /**
-     * Features
-     * @return array
+     * type of header
+     * @return static
      */
-    protected function features(array $data = [])
+    public function typeOfCase()
     {
-        return array_merge($this->properties, [
-            'buttons' => $this->buttons,
-        ]);
+        $this->setAsViewComponent(__FUNCTION__);
+        return $this;
     }
 
     /**

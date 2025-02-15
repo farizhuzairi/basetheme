@@ -4,7 +4,6 @@ namespace Hascha\BaseTheme\Components\Features\Navigation;
 
 use Closure;
 use Hascha\BaseTheme\Traits\Explained;
-use Hascha\BaseTheme\Services\ThemeService;
 use Hascha\BaseTheme\Features\Traits\Featureable;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
@@ -36,14 +35,6 @@ class NavMenu extends BaseComponent implements Componentable, FeatureableCompone
      * @var array
      */
     protected $urls = [];
-
-    /**
-     * @return void
-     */
-    public function construction(ThemeService $service)
-    {
-        $this->typeOfMenu();
-    }
 
     /**
      * Features
@@ -80,29 +71,12 @@ class NavMenu extends BaseComponent implements Componentable, FeatureableCompone
     }
 
     /**
-     * @return static
+     * @return string
      */
-    public function addMenu(array|string $text, string $url, ?Closure $dropdown = null)
+    protected function hasTypeOf(Closure|array|null $dropdown = null)
     {
-        $menu = $this->setMenu($text, $url, $this->hasTypeOf($dropdown));
-
-        if($dropdown instanceof Closure) {
-            $dropdown($this);
-
-            if(! empty($this->subMenu)) {
-
-                $menu = array_merge($menu, [
-                    'urls' => $this->urls,
-                    'dropdown' => $this->subMenu
-                ]);
-
-                $this->urls = [];
-                $this->subMenu = [];
-            }
-        }
-
-        $this->menu = array_merge($this->menu, [$menu]);
-        return $this;
+        if($dropdown instanceof Closure) return 'dropdown';
+        return 'list';
     }
 
     /**
@@ -129,19 +103,36 @@ class NavMenu extends BaseComponent implements Componentable, FeatureableCompone
     /**
      * @return static
      */
+    public function addMenu(array|string $text, string $url, ?Closure $dropdown = null)
+    {
+        $menu = $this->setMenu($text, $url, $this->hasTypeOf($dropdown));
+
+        if($dropdown instanceof Closure) {
+            $dropdown($this);
+
+            if(! empty($this->subMenu)) {
+
+                $menu = array_merge($menu, [
+                    'urls' => $this->urls,
+                    'dropdown' => $this->subMenu
+                ]);
+
+                $this->urls = [];
+                $this->subMenu = [];
+            }
+        }
+
+        $this->menu = array_merge($this->menu, [$menu]);
+        return $this;
+    }
+
+    /**
+     * @return static
+     */
     public function subMenu(array|string $text, string $url, ?string $details = null)
     {
         $this->urls[] = $url;
         $this->subMenu = array_merge($this->subMenu, [$this->setMenu($text, $url, $this->hasTypeOf([]), $details)]);
         return $this;
-    }
-
-    /**
-     * @return string
-     */
-    protected function hasTypeOf(Closure|array|null $dropdown = null)
-    {
-        if($dropdown instanceof Closure) return 'dropdown';
-        return 'list';
     }
 }

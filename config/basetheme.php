@@ -44,6 +44,7 @@ return [
         '<link href="' . asset('basetheme/css/styles.css') . '" rel="stylesheet" type="text/css">',
         '<link href="' . asset('basetheme/css/main.css') . '" rel="stylesheet" type="text/css">'
     ],
+    'cssFramework' => env('CSS_FRAMEWORK', 'tailwind'),
 
     /**
      * Javascripts
@@ -54,12 +55,18 @@ return [
     ],
 
     /**
-     * Use Tailwind CSS
+     * CSS Framework
      * 
      */
-    'tailwind' => [
-        'cdn' => env('TAILWIND_CDN', false),
-        'url' => '<script src="https://cdn.tailwindcss.com"></script>'
+    'css' => [
+        'tailwind' => [
+            'cdn' => env('TAILWIND_CDN', false),
+            'url' => env('TAILWIND', '<script src="https://cdn.tailwindcss.com"></script>')
+        ],
+        'bootstrap' => [
+            'cdn' => env('BOOTSTRAP_CDN', false),
+            'url' => env('BOOTSTRAP', '')
+        ],
     ],
 
     /**

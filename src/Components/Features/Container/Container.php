@@ -3,8 +3,8 @@
 namespace Hascha\BaseTheme\Components\Features\Container;
 
 use Hascha\BaseTheme\Traits\Explained;
-use Hascha\BaseTheme\Services\ThemeService;
 use Hascha\BaseTheme\Features\Traits\Featureable;
+use Hascha\BaseTheme\Features\Traits\WithClasses;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
 use Hascha\BaseTheme\Features\Traits\FeatureableContent;
@@ -18,18 +18,12 @@ class Container extends BaseComponent implements Componentable, FeatureableCompo
     Featureable,
     FeatureableSubject,
     FeatureableContent,
-    SetViewComponent;
+    SetViewComponent,
+    WithClasses;
 
     protected ?string $css = null;
     protected bool $withPadding = true;
-
-    /**
-     * @return void
-     */
-    public function construction(ThemeService $service)
-    {
-        $this->typeOfBase();
-    }
+    protected bool $withButton = false;
 
     /**
      * Features
@@ -40,6 +34,7 @@ class Container extends BaseComponent implements Componentable, FeatureableCompo
         return [
             'css' => $this->css,
             'withPadding' => $this->withPadding,
+            'withButton' => $this->withButton,
         ];
     }
 
@@ -68,22 +63,22 @@ class Container extends BaseComponent implements Componentable, FeatureableCompo
     }
 
     /**
-     * Stylesheet Class
-     * @return static
-     */
-    public function css(string $css)
-    {
-        $this->css = $css;
-        return $this;
-    }
-
-    /**
      * With Padding (Base Container)
      * @return static
      */
     public function withPadding(bool $withPadding = true)
     {
         $this->withPadding = $withPadding;
+        return $this;
+    }
+
+    /**
+     * With Button (Base Container)
+     * @return static
+     */
+    public function withButton(bool $withButton = false)
+    {
+        $this->withButton = $withButton;
         return $this;
     }
 }

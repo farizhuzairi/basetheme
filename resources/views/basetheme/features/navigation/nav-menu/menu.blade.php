@@ -1,5 +1,5 @@
 <nav {{
-    $attributes->merge(['class' => $attributes->prepends('hidden md:flex md:flex-wrap md:gap-5 md:items-center')])
+    $attributes->merge(['class' => $attributes->prepends('hidden md:flex md:flex-wrap md:gap-5 md:items-center text-sm')])
 }}>
     <ul class="base-flex-wrap-space font-menu">
         @foreach($menu as $i)

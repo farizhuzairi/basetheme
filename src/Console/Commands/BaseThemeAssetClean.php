@@ -20,7 +20,7 @@ class BaseThemeAssetClean extends BaseCommand
     public function handle()
     {
         $publicPath = public_path();
-        $foldersToDelete = ['basetheme', 'build', 'icons', 'images/base-layout'];
+        $foldersToDelete = ['basetheme', 'build', 'icons', 'images/base-layout', 'images/bg'];
 
         foreach ($foldersToDelete as $folder) {
             $folderPath = $publicPath . DIRECTORY_SEPARATOR . $folder;

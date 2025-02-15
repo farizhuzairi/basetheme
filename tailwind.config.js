@@ -69,6 +69,8 @@ const theme = {
             'c-text-secondary': '#334155', // slate-700
             'c-text-thick': '#0f172a', // slate-900
             'c-text-thin': '#475569', // slate-600
+            'c-text-light': '#94a3b8', // slate-400
+            'c-text-white': '#e2e8f0', // slate-200
             'info': '#0e7490', // cyan-700
             'success': '#065f46', // emerald-800
             'danger': '#991b1b', // red-800
@@ -182,7 +184,6 @@ const additionalSafelist = [
     'primitive'
 ];
 
-// import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 

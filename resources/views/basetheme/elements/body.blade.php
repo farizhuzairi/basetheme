@@ -12,7 +12,7 @@
     <x-base-component::base-catalog/> --}}
     @endif
 
-    @if(request()->routeIs('index'))
+    @if(request()->routeIs('about'))
     <x-drip-content
     title="Base Theme"
     label="Development Package"

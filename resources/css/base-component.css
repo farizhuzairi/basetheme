@@ -167,7 +167,7 @@
     .base-layout {
         @apply antialiased font-theme
         text-c-text dark:text-c-light
-        bg-c-light-thin dark:bg-c-dark;
+        bg-white dark:bg-c-dark;
     }
 
     .base-page {
