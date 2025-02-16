@@ -7,17 +7,15 @@ use Hascha\BaseTheme\Features\Traits\Featureable;
 use Hascha\BaseTheme\Features\Traits\WithClasses;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
-use Hascha\BaseTheme\Features\Traits\FeatureableContent;
 use Hascha\BaseTheme\Features\Traits\FeatureableSubject;
 use Hascha\BaseTheme\Traits\Components\SetViewComponent;
 use Hascha\BaseTheme\Contracts\Component\FeatureableComponent;
 
-class Skull extends BaseComponent implements Componentable, FeatureableComponent
+class GridBox extends BaseComponent implements Componentable, FeatureableComponent
 {
     use Explained,
     Featureable,
     FeatureableSubject,
-    FeatureableContent,
     SetViewComponent,
     WithClasses;
 
@@ -47,7 +45,7 @@ class Skull extends BaseComponent implements Componentable, FeatureableComponent
      */
     protected function setViewComponentDefault()
     {
-        return "skull";
+        return "grid-box";
     }
 
     /**

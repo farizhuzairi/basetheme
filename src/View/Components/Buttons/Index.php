@@ -20,7 +20,7 @@ class Index extends BaseComponent implements Componentable
         private string $icon = "",
         private string $btnType = "button", // button, submit
         private string $url = "#",
-        protected string $typeOf = "icon", // icon, link
+        protected string $typeOf = "icon", // icon, link, case
         protected bool $isActive = false,
     )
     {
