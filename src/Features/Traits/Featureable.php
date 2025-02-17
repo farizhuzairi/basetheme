@@ -42,6 +42,18 @@ trait Featureable
         if(method_exists($this, "useBadgeInformation")) {
             $results = array_merge($results, $this->useBadgeInformation());
         }
+        
+        if(method_exists($this, "useThemeColor")) {
+            $results = array_merge($results, $this->useThemeColor());
+        }
+        
+        if(method_exists($this, "useGridable")) {
+            $results = array_merge($results, $this->useGridable());
+        }
+        
+        if(method_exists($this, "useButton")) {
+            $results = array_merge($results, ['button' => $this->useButton()]);
+        }
 
         if(method_exists($this, 'classes')) {
             $results = array_merge($results, [
@@ -51,7 +63,7 @@ trait Featureable
             $results = array_merge($results, $this->classVars); // class name vars
         }
 
-        if(property_exists($this, 'style')) {
+        if(method_exists($this, 'style')) {
             $results = array_merge($results, [
                 'style' => $this->stylesheets,
                 'contentStyle' => $this->contentStylesheets

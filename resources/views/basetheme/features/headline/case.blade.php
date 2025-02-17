@@ -8,7 +8,7 @@
             'class' => $class
         ])
     }}>
-    <h3 class="font-title font-semibold border-b border-c-dark-thin text-lg text-c-light leading-5">
+    <h3 class="font-title font-semibold border-b border-c-border-thin text-lg leading-5">
         <a href="{{ $url }}" class="block pb-1">
             @if($icon)<span class="{{ $icon }}"></span>@endif
             {{ $subject }}
