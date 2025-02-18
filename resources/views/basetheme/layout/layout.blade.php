@@ -8,6 +8,7 @@
 <title>{{ $__title }}</title>
 {!! $__css !!}<script>if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.classList.add('dark'); } else { document.documentElement.classList.remove('dark'); }</script>
 @livewireStyles
+@stack('stylesheets')
 </head>
 <body class="base-layout" x-data="{ darkMode: localStorage.getItem('theme') === 'dark' }">
 @php
@@ -18,5 +19,6 @@ echo ${$contents};
 @endphp
 @livewireScripts
 {!! $__js !!}
+@stack('scripts')
 </body>
 </html>

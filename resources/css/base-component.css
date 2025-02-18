@@ -87,6 +87,10 @@
         @apply text-c-light dark:text-c-light-thin
     }
 
+    .basethick-text .brand-name {
+        @apply text-secondary;
+    }
+
     .basethick-bg {
         @apply basethick-text
         bg-gradient-to-r

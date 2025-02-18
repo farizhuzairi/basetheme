@@ -1,5 +1,14 @@
 @layer base {
 
+    .btn-reset {
+        @apply ring-0 active:ring-0 focus:ring-0
+        outline-none active:outline-none focus:outline-none;
+    }
+
+    .btn-border-none {
+        @apply border-0 active:border-0 focus:border-0;
+    }
+
     .btn-base {
         @apply
         bg-slate-200/25 dark:bg-slate-700/75

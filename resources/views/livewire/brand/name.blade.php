@@ -1,1 +1,1 @@
-<span class="{{ $css ?? '' }}">{{ $name }}</span>
+<span class="{{ $css ?? 'brand-name' }}">{{ $name }}</span>

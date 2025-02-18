@@ -1,1 +1,1 @@
-<div class="w-5 h-5 rounded"><img src="{{ $logo }}" alt="brand official image" class="object w-5 h-5.5 rounded shadow"></div>
+<div class="w-5 h-5 rounded brand-logo"><img src="{{ $logo }}" alt="brand official image" class="object w-5 h-5.5 rounded shadow"></div>
