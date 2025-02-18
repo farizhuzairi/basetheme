@@ -8,14 +8,14 @@
             'class' => $class
         ])
     }}>
-    <h3 class="font-title font-semibold border-b border-c-border-thin text-lg leading-5">
-        <a href="{{ $url }}" class="block pb-1">
+    <a href="{{ $url }}" class="border-b border-c-light-thick">
+        <h3 class="font-title font-semibold pb-1 text-lg leading-4">
             @if($icon)<span class="{{ $icon }}"></span>@endif
             {{ $subject }}
-            @if($introduction)
-            <p class="text-xs font-light">{{ $introduction }}</p>
-            @endif
-        </a>
-    </h3>
+        </h3>
+        @if($introduction)
+        <p class="text-xs">{{ $introduction }}</p>
+        @endif
+    </a>
     <a href="" class="flex items-center text-xl hover:text-2xl transition-all"><span class="hascha-right"></span></a>
 </div>

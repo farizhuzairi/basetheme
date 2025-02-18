@@ -24,17 +24,17 @@ if($withBox) {
 }
 @endphp
 <ul {{
-    $attributes->merge(['class' => $attributes->prepends('mt-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5')])
+    $attributes->merge(['class' => $attributes->prepends('mt-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5')])
 }}>
     @foreach($items as $key => $item)
-    <li class="{{ $box }}">
-        <div class="bg-c-light rounded shadow hover:scale-105 transition-all">
+    <li class="{{ $box }} group">
+        <div class="bg-c-light rounded shadow group-hover:scale-105 transition duration-150 ease-in">
             <a href="{{ $item['url'] }}">
                 <img src="{{ $item['image'] }}" alt="{{ 'gallery image: ' . $item['title'] }}" class="rounded">
             </a>
         </div>
         <div class="mt-1 bg-c-dark-thick px-2 py-3 rounded shadow text-c-text-light">
-            <h5 class="font-menu text-c-light-thin hover:text-c-light transition-all">
+            <h5 class="font-menu text-c-light-thin group-hover:text-secondary group-hover:underline group-hover:tracking-wide transition-all">
                 <a href="{{ $item['url'] }}">{{ $item['title'] }}</a>
             </h5>
             @if($item['introduction'])<p class="text-xs">{{ $item['introduction'] }}</p>@endif

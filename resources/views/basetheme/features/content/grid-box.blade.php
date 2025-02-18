@@ -34,11 +34,13 @@ else {
         'style' => $style,
     ])
 }}>
+    @if(!empty($subject))
     <div class="flex flex-col justify-center items-center mb-12 bg-c-light-thin/50 text-c-text dark:bg-c-dark/75 dark:text-c-text-white p-3 rounded">
-        <h2 class="font-title font-semibold text-lg leading-5">{{ $subject }}</h2>
-        @if($introduction)<p class="text-sm font-light">{{ $introduction }}</p>@endif
+        <h2 class="font-title font-semibold text-xl leading-5">{{ $subject }}</h2>
+        @if($introduction)<p class="text-sm text-center font-light">{{ $introduction }}</p>@endif
     </div>
-    <div class="grid {{ $iGrid }} gap-5 md:gap-8 lg:gap-12">
+    @endif
+    <div class="grid-box grid {{ $iGrid }} gap-5 md:gap-8 lg:gap-8">
         @foreach($items as $i)
         <x-base::grid.featured
         :key="liveKey($i['title'], 'grid_featured_')"

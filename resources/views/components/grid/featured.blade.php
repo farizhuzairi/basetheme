@@ -8,7 +8,7 @@
 ]))
 
 <div {{
-    $attributes->merge(['class' => $attributes->prepends('border border-c-border hover:border-transparent dark:border-c-border-deep rounded shadow bg-c-light-white hover:bg-c-theme dark:bg-c-light dark:hover:bg-c-theme text-c-text hover:text-c-text-white hover:scale-105 hover:-translate-y-1 transition-all group')])
+    $attributes->merge(['class' => $attributes->prepends('grid-featured border border-c-border hover:border-transparent dark:border-c-border-deep rounded shadow bg-c-light-white hover:bg-c-theme dark:bg-c-light dark:hover:bg-c-theme text-c-text hover:text-c-text-white hover:scale-105 hover:-translate-y-1 transition duration-150 ease-in group')])
     ->merge([
         'class' => $class,
         'style' => $style,

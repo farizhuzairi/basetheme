@@ -70,16 +70,6 @@ class GridBox extends BaseComponent implements Componentable, FeatureableCompone
     }
 
     /**
-     * type of skull
-     * @return static
-     */
-    public function typeOfSkull()
-    {
-        $this->setAsViewComponent(__FUNCTION__);
-        return $this;
-    }
-
-    /**
      * Data items
      * @return static
      */

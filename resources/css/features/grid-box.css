@@ -1,0 +1,13 @@
+/*
+-------------------------------------
+Grid Box Feature's
+-------------------------------------
+*/
+
+.grid-featured {
+    transition: .3s;
+}
+
+.grid-box:hover > :not(:hover) {
+    opacity: .7;
+}

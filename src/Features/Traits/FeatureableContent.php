@@ -25,6 +25,12 @@ trait FeatureableContent
 
     // content attributes
     protected array $contents = [];
+
+    // with Tab
+    protected bool $isTabContent = false;
+
+    // Tab Key Data
+    protected array $tabs = [];
     
     /**
      * Card Body Content
@@ -51,7 +57,31 @@ trait FeatureableContent
             return $fc . 's';
         };
 
-        $this->{$_var(__FUNCTION__, $var)}[] = $_feature;
+        if($this->isTabContent) {
+            $this->{$_var(__FUNCTION__, $var)}[array_key_last($this->tabs)] = $_feature;
+        }
+        else {
+            $this->{$_var(__FUNCTION__, $var)}[] = $_feature;
+        }
+
+        return $this;
+    }
+
+    /**
+     * With Tab Contents
+     * @return static
+     */
+    public function tabContent(string $key, string $tabName, string $class, Closure|array $attributes = [], ?Closure $component = null, ?string $var = null)
+    {
+        if(!empty($key) && !empty($tabName)) {
+            $this->isTabContent = true;
+            $this->tabs[$key] = [
+                'key' => $key,
+                'name' => $tabName,
+            ];
+        }
+
+        $this->content($class, $attributes, $component, $var);
         return $this;
     }
 
@@ -60,6 +90,11 @@ trait FeatureableContent
      */
     public function featureableContents(Collection $data)
     {
-        return $data->put('contents', $this->contents);
+        // if($this->isTabContent) dd($this->contents);
+        // if($this->isTabContent) dd(array_key_last($this->tabs));
+        $data = $data->put('isTabContent', $this->isTabContent);
+        $data = $data->put('tabs', $this->tabs);
+        $data = $data->put('contents', $this->contents);
+        return $data;
     }
 }

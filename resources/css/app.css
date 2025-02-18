@@ -13,3 +13,10 @@
 @import "./card-component.css";
 
 @import "tailwindcss/utilities";
+
+/*
+-------------------------------------
+Features
+-------------------------------------
+*/
+@import "./features/grid-box.css";
