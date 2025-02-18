@@ -29,6 +29,14 @@ class Exists
         );
 
         /**
+         * Button Component
+         */
+        Blade::componentNamespace(
+            'Hascha\\BaseTheme\\Builder\\Layout\\Support',
+            'support'
+        );
+
+        /**
          * Panel Component
          */
         Blade::componentNamespace(

@@ -141,7 +141,7 @@
 
     .bg-sub-menu-style,
     .bg-sub-menu-style-soft {
-        @apply bg-c-theme text-c-theme-text shadow;
+        @apply bg-c-theme text-c-text-white shadow;
     }
 
     .bg-sub-menu-style-soft,

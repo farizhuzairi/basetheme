@@ -8,7 +8,7 @@ switch($theme) {
         $css = " bg-primary dark:bg-primary text-c-text dark:text-c-text outline-secondary";
         break;
     case 'theme':
-        $css = " bg-c-theme dark:bg-c-dark text-c-theme-text dark:text-c-text outline-c-dark-thin";
+        $css = " bg-c-theme dark:bg-c-dark text-c-text-white dark:text-c-text outline-c-dark-thin";
         break;
     default:
         $css = " bg-c-light-thick dark:bg-c-light-thick text-c-text dark:text-c-text outline-c-light-thick";

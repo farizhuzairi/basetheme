@@ -47,35 +47,34 @@ const theme = {
             '100': '100',
         },
         colors: {
-            'primary': '#bb4609',
-            'secondary': '#f6bc9d',
-            'c-theme': '#083344', // cyan-950
-            'c-theme-secondary': '#cffafe', // cyan-100
-            'c-theme-text': '#e2e8f0', // slate-200
-            'c-theme-secondary-text': '#083344', // cyan-950
-            'c-light': '#cbd5e1', // slate-300
-            'c-light-dark': '#94a3b8', // slate-400
-            'c-light-thick': '#94a3b8', // slate-400
-            'c-light-thin': '#e2e8f0', // slate-200
-            'c-dark': '#1e293b', // slate-800
-            'c-dark-light': '#334155', // slate-700
-            'c-dark-thin': '#334155', // slate-700
-            'c-dark-thick': '#0f172a', // slate-950
-            'c-border': '#d1d5db', // gray-300
-            'c-border-thin': '#e5e7eb', // gray-200
-            'c-border-thick': '#9ca3af', // gray-400
-            'c-border-deep': '#475569', // slate-600
-            'c-text': '#1e293b', // slate-800
-            'c-text-secondary': '#334155', // slate-700
-            'c-text-thick': '#0f172a', // slate-900
-            'c-text-thin': '#475569', // slate-600
-            'c-text-light': '#94a3b8', // slate-400
-            'c-text-white': '#e2e8f0', // slate-200
-            'info': '#0e7490', // cyan-700
-            'success': '#065f46', // emerald-800
-            'danger': '#991b1b', // red-800
-            'warning': '#f59e0b', // amber-500
-            'error': '#991b1b', // red-800
+            'primary': 'var(--color-primary)',
+            'secondary': 'var(--color-secondary)',
+            'c-theme': 'var(--color-c-theme)',
+            'c-theme-secondary': 'var(--color-c-theme-secondary)',
+            'c-light': 'var(--color-c-light)',
+            'c-light-dark': 'var(--color-c-light-dark)',
+            'c-light-thick': 'var(--color-c-light-thick)',
+            'c-light-thin': 'var(--color-c-light-thin)',
+            'c-dark': 'var(--color-c-dark)',
+            'c-dark-light': 'var(--color-c-dark-light)',
+            'c-dark-thick': 'var(--color-c-dark-thick)',
+            'c-dark-thin': 'var(--color-c-dark-thin)',
+            'c-border': 'var(--color-c-border)',
+            'c-border-deep': 'var(--color-c-border-deep)',
+            'c-border-thick': 'var(--color-c-border-thick)',
+            'c-border-thin': 'var(--color-c-border-thin)',
+            'c-text': 'var(--color-c-text)',
+            'c-text-dark': 'var(--color-c-text-dark)',
+            'c-text-light': 'var(--color-c-text-light)',
+            'c-text-secondary': 'var(--color-c-text-secondary)',
+            'c-text-thick': 'var(--color-c-text-thick)',
+            'c-text-thin': 'var(--color-c-text-thin)',
+            'c-text-white': 'var(--color-c-text-white)',
+            'info': 'var(--color-info)',
+            'success': 'var(--color-success)',
+            'danger': 'var(--color-danger)',
+            'warning': 'var(--color-warning)',
+            'error': 'var(--color-error)',
             'hascha': {
                 50: '#ebeaf6',
                 100: '#d7d6ed',
