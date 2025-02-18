@@ -26,7 +26,7 @@ if($withPadding) {
         @if($isTabContent)
             <ul class="base-flex-wrap-space mb-3 justify-center">
                 @foreach($tabs as $tabKey => $tab)
-                <li class="cursor-pointer border border-c-border px-2 py-0.5 rounded text-sm text-c-text-thin font-sans hover:text-c-text transition duration-300 ease-in-out" @click="cTab = '{{ $tabKey }}'" :class="cTab === '{{ $tabKey }}' ? 'bg-c-light-thin font-semibold text-primary' : 'bg-c-light'">{{ $tab['name'] }}</li>
+                <li class="cursor-pointer border border-c-border px-2 py-0.5 rounded text-sm text-c-text-thin font-sans transition duration-300 ease-in-out" @click="cTab = '{{ $tabKey }}'" :class="cTab === '{{ $tabKey }}' ? 'bg-c-theme font-semibold text-c-text-white hover:text-c-text-white' : 'bg-white hover:bg-c-light-thin hover:text-c-text'">{{ $tab['name'] }}</li>
                 @endforeach
             </ul>
             @foreach($contents as $key => $content)
