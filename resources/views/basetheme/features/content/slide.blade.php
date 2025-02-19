@@ -105,7 +105,6 @@
                     return;
                 }
 
-                // Menyesuaikan jumlah card berdasarkan ukuran layar
                 if (window.innerWidth < 640) {
                     this.visibleCards = 1;
                 } else if (window.innerWidth < 1024) {
@@ -116,7 +115,6 @@
 
                 this.totalDots = Math.ceil(this.items.length / this.visibleCards);
 
-                // Reset activeIndex jika melebihi jumlah total item
                 if (this.activeIndex >= this.items.length) {
                     this.activeIndex = 0;
                 }
@@ -145,7 +143,6 @@
                 this.updateVisibleCards();
                 window.addEventListener('resize', () => this.updateVisibleCards());
 
-                // Pastikan autoslide berjalan setelah semua dihitung
                 this.startAutoSlide();
             }
         };
