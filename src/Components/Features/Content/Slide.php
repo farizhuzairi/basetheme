@@ -6,6 +6,7 @@ use Closure;
 use Hascha\BaseTheme\Traits\Explained;
 use Hascha\BaseTheme\Features\Traits\Featureable;
 use Hascha\BaseTheme\Features\Traits\WithClasses;
+use Hascha\BaseTheme\Features\Traits\WithReadmore;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
 use Hascha\BaseTheme\Features\Traits\FeatureableSubject;
@@ -18,7 +19,8 @@ class Slide extends BaseComponent implements Componentable, FeatureableComponent
     Featureable,
     FeatureableSubject,
     SetViewComponent,
-    WithClasses;
+    WithClasses,
+    WithReadmore;
 
     /**
      * Data objects

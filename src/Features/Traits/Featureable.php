@@ -88,6 +88,10 @@ trait Featureable
         if(method_exists($this, "linkable")) {
             $results = $this->linkable($results);
         }
+        
+        if(method_exists($this, "useReadmore")) {
+            $results = array_merge($results, $this->useReadmore());
+        }
 
         return collect($results)->put('_key', $this->_key);
     }

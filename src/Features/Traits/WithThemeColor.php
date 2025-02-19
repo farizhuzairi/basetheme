@@ -2,9 +2,6 @@
 
 namespace Hascha\BaseTheme\Features\Traits;
 
-use Hascha\BaseTheme\Contracts\Layouting;
-use Hascha\BaseTheme\Contracts\Component\FeatureableComponent;
-
 trait WithThemeColor
 {
     protected ?string $themeColor = null;

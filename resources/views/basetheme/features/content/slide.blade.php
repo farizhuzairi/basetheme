@@ -1,10 +1,10 @@
-@props(__props_class([
+@props(__props_class(__props_readmore([
     'title' => null,
     'description' => null,
     'items' => []
-]))
+])))
 <div {{
-    $attributes->merge(['class' => $attributes->prepends('bg-gradient-to-r from-c-light-thin dark:from-c-theme via-secondary dark:via-secondary to-secondary dark:to-secondary')])
+    $attributes->merge(['class' => $attributes->prepends('bg-secondary dark:bg-gradient-to-r dark:from-primary dark:to-c-theme')])
     ->merge([
         'class' => $class,
         'style' => $style,
@@ -47,12 +47,12 @@
     
                     @foreach ($items as $i)
                         <div class="w-full lg:w-1/3 flex-shrink-0 py-1 px-4">
-                            <div class="bg-white dark:bg-c-light-thin text-c-text shadow-lg rounded-lg text-center h-full flex items-center">
+                            <div class="bg-white dark:bg-c-light-thin text-c-text shadow-lg rounded-lg text-center h-full flex justify-center items-center">
                                 <a href="" class="px-3 py-5">
                                     @if($i['fill'])
                                     <div class="flex justify-center items-center mb-1">
                                         @if($i['fill']['type'] === 'icon')
-                                        <span class="{{ $i['fill']['fill'] }} text-4xl {{ $i['fill']['css'] ?? 'text-c-text-light' }}"></span>
+                                        <span class="{{ $i['fill']['fill'] }} text-4xl {{ $i['fill']['css'] ?? 'text-c-light-thick' }}"></span>
                                         @else
                                         <img src="{{ $i['fill']['fill'] }}" alt="Slide Image, {{ $i['title'] }}" class="rounded">
                                         @endif
@@ -77,12 +77,18 @@
             </button>
     
             <!-- Dots Indicator -->
-            <div class="flex justify-center mt-3 space-x-2">
+            <div class="flex justify-center items-center mt-3 space-x-2">
                 <template x-for="(dot, index) in totalDots" :key="index">
                     <button @click="activeIndex = index * visibleCards"
                         :class="activeIndex === index * visibleCards ? 'bg-c-dark' : 'bg-c-light'"
                         class="w-3 h-3 border border-c-border rounded-full transition-all"></button>
                 </template>
+                @if($readmore)
+                <a href="{{ $readmore['url'] }}" class="text-xs text-secondary hover:text-primary transition-all dark:text-c-text-light">
+                    @if(!empty($readmore['icon']))<span class="{{ $readmore['icon'] }}"></span>@endif
+                    {{ $readmore['text'] }}
+                </a>
+                @endif
             </div>
         </div>
     </div>

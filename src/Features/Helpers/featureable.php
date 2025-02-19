@@ -61,6 +61,17 @@ if(! function_exists('__props_button')){
     }
 }
 
+if(! function_exists('__props_readmore')){
+
+    function __props_readmore(array $props = []) {
+        return array_merge([
+            'text' => '',
+            'url' => '#',
+            'icon' => '',
+        ], $props);
+    }
+}
+
 if(! function_exists('__props_class')){
 
     function __props_class(array $props = []) {

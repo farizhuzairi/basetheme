@@ -6,6 +6,7 @@ use Closure;
 use Hascha\BaseTheme\Traits\Explained;
 use Hascha\BaseTheme\Features\Traits\Featureable;
 use Hascha\BaseTheme\Features\Traits\WithClasses;
+use Hascha\BaseTheme\Features\Traits\WithReadmore;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
 use Hascha\BaseTheme\Features\Traits\FeatureableSubject;
@@ -18,7 +19,8 @@ class Dampen extends BaseComponent implements Componentable, FeatureableComponen
     Featureable,
     FeatureableSubject,
     SetViewComponent,
-    WithClasses;
+    WithClasses,
+    WithReadmore;
 
     /**
      * Data objects
@@ -49,12 +51,6 @@ class Dampen extends BaseComponent implements Componentable, FeatureableComponen
      * @var array
      */
     protected $button = [];
-
-    /**
-     * Readmore Element (Temporary)
-     * @var array
-     */
-    protected $readmore = [];
 
     /**
      * Features
@@ -143,20 +139,6 @@ class Dampen extends BaseComponent implements Componentable, FeatureableComponen
     {
         $this->button = [
             'text' => $text,
-            'icon' => $icon,
-        ];
-        return $this;
-    }
-
-    /**
-     * Readmore URL element
-     * @return static
-     */
-    public function readmore(string $text, string $url = '#', string $icon = "hascha-trending_neutral")
-    {
-        $this->readmore = [
-            'text' => $text,
-            'url' => $url,
             'icon' => $icon,
         ];
         return $this;
