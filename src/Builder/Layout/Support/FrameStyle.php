@@ -36,7 +36,7 @@ class FrameStyle extends Component
 
         public $cText = '#1e293b', // slate-800
         public $cTextDark = '#1e293b', // slate-800
-        public $cTextLight = '#94a3b8', // slate-400
+        public $cTextLight = '#cbd5e1', // slate-300
         public $cTextSecondary = '#334155', // slate-700
         public $cTextThick = '#0f172a', // slate-900
         public $cTextThin = '#475569', // slate-600

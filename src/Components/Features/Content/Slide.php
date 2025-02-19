@@ -33,6 +33,12 @@ class Slide extends BaseComponent implements Componentable, FeatureableComponent
     protected $items = [];
 
     /**
+     * Fill Data (Temporary)
+     * @var array
+     */
+    protected $fill = [];
+
+    /**
      * Features
      * @return array
      */
@@ -61,10 +67,33 @@ class Slide extends BaseComponent implements Componentable, FeatureableComponent
      * Headline
      * @return static
      */
-    public function headline(string $title, ?string $description = null)
+    public function headline(string $title, ?string $description = null, ?Closure $fill = null)
     {
+        if($fill instanceof Closure) {
+            $fill($this);
+        }
+
         $this->properties['title'] = $title;
         $this->properties['description'] = $description;
+        $this->properties['fill'] = $this->fill;
+
+        $this->fill = [];
+        return $this;
+    }
+
+    /**
+     * Fill Functionable
+     * @return static
+     */
+    public function fill(string $fill, string $typeOf = "icon", ?string $css = null)
+    {
+        if($typeOf === "icon" || $typeOf === "image") {
+            $this->fill = [
+                'type' => $typeOf, // icon or image
+                'fill' => $fill,
+                'css' => $css,
+            ];
+        }
 
         return $this;
     }
@@ -78,12 +107,21 @@ class Slide extends BaseComponent implements Componentable, FeatureableComponent
         if($closure instanceof Closure) {
             $closure($this);
         }
+        else {
+            $this->fill = [
+                // 'type' => 'icon',
+                // 'fill' => 'hascha-layers1',
+                // 'css' => null,
+            ];
+        }
         
         $this->items[] = [
             'title' => $title,
             'description' => $description,
+            'fill' => $this->fill,
         ];
 
+        $this->fill = [];
         return $this;
     }
 }

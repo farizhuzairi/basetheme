@@ -4,7 +4,7 @@
     'items' => []
 ]))
 <div {{
-    $attributes->merge(['class' => $attributes->prepends('bg-gradient-to-r from-c-light dark:from-c-dark via-c-light-thin dark:via-c-light-thick to-c-theme text-c-text dark:text-c-text-white')])
+    $attributes->merge(['class' => $attributes->prepends('')])
     ->merge([
         'class' => $class,
         'style' => $style,
@@ -20,7 +20,16 @@
         @if($title || $description)
         <div class="col-span-12 md:col-span-6 lg:col-span-4 h-full">
             @if($title)<h3 class="font-semibold font-title text-2xl">{{ $title }}</h3>@endif
-            @if($description)<p class="font-sans leading-5">{{ $description }}</p>@endif
+            @if($description)<p class="text-c-text-thin dark:text-c-text-light font-sans leading-5">{{ $description }}</p>@endif
+            @if($fill)
+            <div class="mt-3">
+                @if($fill['type'] === 'icon')
+                <span class="{{ $fill['fill'] }} text-5xl {{ $fill['css'] ?? 'text-c-text-thin dark:text-secondary' }}"></span>
+                @else
+                <img src="{{ $fill['fill'] }}" alt="fill image Slide Headline" class="rounded">
+                @endif
+            </div>
+            @endif
         </div>
         @endif
         <div x-data="carouselData({{ json_encode($items) }})"
@@ -37,11 +46,21 @@
                     :style="'transform: translateX(-' + activeIndex * (100 / visibleCards) + '%)'">
     
                     @foreach ($items as $i)
-                        <div class="w-full lg:w-1/3 flex-shrink-0 px-4">
-                            <div class="bg-white dark:bg-c-light-thin text-c-text shadow-lg rounded-lg p-6 text-center">
-                                <div class="flex justify-center items-center text-5xl text-c-text-light font-light mb-1"><span class="hascha-layers1"></span></div>
-                                <h2 class="text-base font-title font-semibold">{{ $i['title'] }}</h2>
-                                <p class="text-c-text-light text-sm">{{ $i['description'] }}</p>
+                        <div class="w-full lg:w-1/3 flex-shrink-0 py-1 px-4">
+                            <div class="bg-white dark:bg-c-light-thin text-c-text shadow-lg rounded-lg text-center h-full flex items-center">
+                                <a href="" class="px-3 py-5">
+                                    @if($i['fill'])
+                                    <div class="flex justify-center items-center mb-1">
+                                        @if($i['fill']['type'] === 'icon')
+                                        <span class="{{ $i['fill']['fill'] }} text-4xl {{ $i['fill']['css'] ?? 'text-c-text-light' }}"></span>
+                                        @else
+                                        <img src="{{ $i['fill']['fill'] }}" alt="Slide Image, {{ $i['title'] }}" class="rounded">
+                                        @endif
+                                    </div>
+                                    @endif
+                                    <h2 class="text-base font-sans font-semibold leading-5 mb-1">{{ $i['title'] }}</h2>
+                                    <p class="text-c-text-thin text-xs leading-4">{{ $i['description'] }}</p>
+                                </a>
                             </div>
                         </div>
                     @endforeach
@@ -71,81 +90,81 @@
 
 @push('scripts')
 <script>
-    function carouselData(items) {
-        return {
-            items: items,
-            activeIndex: 0,
-            visibleCards: 3, 
-            totalDots: Math.ceil(items.length / 3),
-            interval: null,
-            touchStartX: 0,
-            touchEndX: 0,
+function carouselData(items) {
+    return {
+        items: items,
+        activeIndex: 0,
+        visibleCards: 3, 
+        totalDots: Math.ceil(items.length / 3),
+        interval: null,
+        touchStartX: 0,
+        touchEndX: 0,
 
-            startAutoSlide() {
-                this.interval = setInterval(() => {
-                    this.next();
-                }, 10000);
-            },
+        startAutoSlide() {
+            this.interval = setInterval(() => {
+                this.next();
+            }, 10000);
+        },
 
-            stopAutoSlide() {
-                clearInterval(this.interval);
-            },
+        stopAutoSlide() {
+            clearInterval(this.interval);
+        },
 
-            prev() {
-                this.activeIndex = (this.activeIndex > 0) ? this.activeIndex - 3 : this.items.length - this.visibleCards;
-            },
-            next() {
-                this.activeIndex = (this.activeIndex < this.items.length - this.visibleCards) ? this.activeIndex + 3 : 0;
-            },
+        prev() {
+            this.activeIndex = (this.activeIndex > 0) ? this.activeIndex - 3 : this.items.length - this.visibleCards;
+        },
+        next() {
+            this.activeIndex = (this.activeIndex < this.items.length - this.visibleCards) ? this.activeIndex + 3 : 0;
+        },
 
-            updateVisibleCards() {
-                if (!this.items || this.items.length === 0) {
-                    this.visibleCards = 1;
-                    this.totalDots = 0;
-                    return;
-                }
-
-                if (window.innerWidth < 640) {
-                    this.visibleCards = 1;
-                } else if (window.innerWidth < 1024) {
-                    this.visibleCards = 1;
-                } else {
-                    this.visibleCards = 3;
-                }
-
-                this.totalDots = Math.ceil(this.items.length / this.visibleCards);
-
-                if (this.activeIndex >= this.items.length) {
-                    this.activeIndex = 0;
-                }
-            },
-
-            handleTouchStart(event) {
-                this.touchStartX = event.touches[0].clientX;
-            },
-
-            handleTouchEnd(event) {
-                this.touchEndX = event.changedTouches[0].clientX;
-                this.detectSwipe();
-            },
-
-            detectSwipe() {
-                let swipeDistance = this.touchStartX - this.touchEndX;
-
-                if (swipeDistance > 50) {
-                    this.next();
-                } else if (swipeDistance < -50) {
-                    this.prev();
-                }
-            },
-
-            init() {
-                this.updateVisibleCards();
-                window.addEventListener('resize', () => this.updateVisibleCards());
-
-                this.startAutoSlide();
+        updateVisibleCards() {
+            if (!this.items || this.items.length === 0) {
+                this.visibleCards = 1;
+                this.totalDots = 0;
+                return;
             }
-        };
-    }
+
+            if (window.innerWidth < 640) {
+                this.visibleCards = 1;
+            } else if (window.innerWidth < 1024) {
+                this.visibleCards = 1;
+            } else {
+                this.visibleCards = 3;
+            }
+
+            this.totalDots = Math.ceil(this.items.length / this.visibleCards);
+
+            if (this.activeIndex >= this.items.length) {
+                this.activeIndex = 0;
+            }
+        },
+
+        handleTouchStart(event) {
+            this.touchStartX = event.touches[0].clientX;
+        },
+
+        handleTouchEnd(event) {
+            this.touchEndX = event.changedTouches[0].clientX;
+            this.detectSwipe();
+        },
+
+        detectSwipe() {
+            let swipeDistance = this.touchStartX - this.touchEndX;
+
+            if (swipeDistance > 50) {
+                this.next();
+            } else if (swipeDistance < -50) {
+                this.prev();
+            }
+        },
+
+        init() {
+            this.updateVisibleCards();
+            window.addEventListener('resize', () => this.updateVisibleCards());
+
+            this.startAutoSlide();
+        }
+    };
+}
 </script>
 @endpush
