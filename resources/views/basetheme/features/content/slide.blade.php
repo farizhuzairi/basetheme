@@ -4,7 +4,7 @@
     'items' => []
 ]))
 <div {{
-    $attributes->merge(['class' => $attributes->prepends('')])
+    $attributes->merge(['class' => $attributes->prepends('bg-gradient-to-r from-c-light-thin dark:from-c-theme via-secondary dark:via-secondary to-secondary dark:to-secondary')])
     ->merge([
         'class' => $class,
         'style' => $style,
@@ -111,10 +111,10 @@ function carouselData(items) {
         },
 
         prev() {
-            this.activeIndex = (this.activeIndex > 0) ? this.activeIndex - 3 : this.items.length - this.visibleCards;
+            this.activeIndex = (this.activeIndex > 0) ? this.activeIndex - this.visibleCards : this.items.length - this.visibleCards;
         },
         next() {
-            this.activeIndex = (this.activeIndex < this.items.length - this.visibleCards) ? this.activeIndex + 3 : 0;
+            this.activeIndex = (this.activeIndex < this.items.length - this.visibleCards) ? this.activeIndex + this.visibleCards : 0;
         },
 
         updateVisibleCards() {
