@@ -51,6 +51,7 @@ else {
         :themeColor="$themeColor"
         :class="$i['class']"
         :buttonText="$i['buttonText']"
+        :$withBox
         />
         @endforeach
     </div>
