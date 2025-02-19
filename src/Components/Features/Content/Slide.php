@@ -58,7 +58,19 @@ class Slide extends BaseComponent implements Componentable, FeatureableComponent
     }
 
     /**
-     * Subjectable Items
+     * Headline
+     * @return static
+     */
+    public function headline(string $title, ?string $description = null)
+    {
+        $this->properties['title'] = $title;
+        $this->properties['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Items
      * @return static
      */
     public function item(string $title, string $description, ?Closure $closure = null)

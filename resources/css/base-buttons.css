@@ -15,7 +15,7 @@
         hover:bg-slate-200/50 dark:hover:bg-slate-700
         text-slate-700 dark:text-slate-300
         font-btn
-        border border-c-border/75 dark:border-c-border/25
+        border border-gray-300/75 dark:border-gray-300/25
         rounded
         px-3 py-[1px];
     }

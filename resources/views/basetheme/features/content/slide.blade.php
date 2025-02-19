@@ -1,4 +1,6 @@
 @props(__props_class([
+    'title' => null,
+    'description' => null,
     'items' => []
 ]))
 <div {{
@@ -9,19 +11,25 @@
     ])
 }}>
     <div class="base-container py-12 grid grid-cols-12 gap-5 lg:gap-3 items-center">
-        <div class="col-span-12 md:col-span-6 lg:col-span-4 border-s-2 border-c-border-thick ps-3 h-full">
-            <h3 class="font-semibold font-title text-xl">
-                {{ 'Example Title' }}
-            </h3>
-            <p class="leading-5">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas cumque, fuga, neque possimus numquam mollitia dicta tempore voluptatibus modi aspernatur, earum maxime?
-            </p>
+        @if($subject)
+        <div class="col-span-12">
+            <h2 class="font-title leading-5">{{ $subject }}</h2>
+            @if($introduction)<p class="text-xs font-normal">{{ $introduction }}</p>@endif
         </div>
+        @endif
+        @if($title || $description)
+        <div class="col-span-12 md:col-span-6 lg:col-span-4 h-full">
+            @if($title)<h3 class="font-semibold font-title text-2xl">{{ $title }}</h3>@endif
+            @if($description)<p class="font-sans leading-5">{{ $description }}</p>@endif
+        </div>
+        @endif
         <div x-data="carouselData({{ json_encode($items) }})"
-            x-init="startAutoSlide(); updateVisibleCards(); window.addEventListener('resize', this.updateVisibleCards)"
+            x-init="init()"
             @mouseenter="stopAutoSlide()" 
             @mouseleave="startAutoSlide()"
-            class="col-span-12 md:col-span-6 lg:col-span-8 relative w-full overflow-hidden">
+            @touchstart="handleTouchStart($event)"
+            @touchend="handleTouchEnd($event)"
+            class="col-span-12 md:col-span-6 lg:col-span-8 relative w-full overflow-hidden {{ empty($title) && empty($description) ? 'md:col-start-4 lg:col-start-3' : '' }}">
     
             <!-- Container -->
             <div class="relative overflow-hidden w-full">
@@ -69,11 +77,14 @@
             activeIndex: 0,
             visibleCards: 3, 
             totalDots: Math.ceil(items.length / 3),
+            interval: null,
+            touchStartX: 0,
+            touchEndX: 0,
 
             startAutoSlide() {
-                setInterval(() => {
+                this.interval = setInterval(() => {
                     this.next();
-                }, 5000);
+                }, 10000);
             },
 
             stopAutoSlide() {
@@ -108,6 +119,25 @@
                 // Reset activeIndex jika melebihi jumlah total item
                 if (this.activeIndex >= this.items.length) {
                     this.activeIndex = 0;
+                }
+            },
+
+            handleTouchStart(event) {
+                this.touchStartX = event.touches[0].clientX;
+            },
+
+            handleTouchEnd(event) {
+                this.touchEndX = event.changedTouches[0].clientX;
+                this.detectSwipe();
+            },
+
+            detectSwipe() {
+                let swipeDistance = this.touchStartX - this.touchEndX;
+
+                if (swipeDistance > 50) {
+                    this.next();
+                } else if (swipeDistance < -50) {
+                    this.prev();
                 }
             },
 

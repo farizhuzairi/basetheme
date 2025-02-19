@@ -8,7 +8,7 @@
     
     .card-base {
         @apply bg-white dark:bg-c-theme
-        border border-c-border dark:border-c-border/25
+        border border-gray-300 dark:border-gray-300/25
         rounded
         text-c-dark dark:text-c-light
         flex flex-col gap-3

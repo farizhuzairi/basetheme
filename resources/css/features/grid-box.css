@@ -9,5 +9,5 @@ Grid Box Feature's
 }
 
 .grid-box:hover > :not(:hover) {
-    opacity: .6;
+    opacity: .8;
 }
