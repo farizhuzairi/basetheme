@@ -3,7 +3,6 @@
 namespace Hascha\BaseTheme\Components\Features\Forms;
 
 use Closure;
-use Hascha\BaseTheme\Services\ThemeService;
 use Hascha\BaseTheme\Features\Traits\Featureable;
 use Hascha\BaseTheme\Builder\Component\BaseComponent;
 use Hascha\BaseTheme\Contracts\Component\Componentable;
@@ -33,11 +32,6 @@ class BaseForm extends BaseComponent implements Componentable, FeatureableCompon
     // Optional Attributes
     protected ?string $placeholder = null;
     protected ?string $label = null;
-
-    protected function construction(ThemeService $service)
-    {
-        $this->typeOfBase();
-    }
 
     public function baseComponent(): string
     {
@@ -205,7 +199,7 @@ class BaseForm extends BaseComponent implements Componentable, FeatureableCompon
      * Reset Form Sub Data
      * @return void
      */
-    public function reset()
+    protected function reset()
     {
         $this->label = null;
         $this->placeholder = null;

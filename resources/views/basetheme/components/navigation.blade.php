@@ -45,15 +45,12 @@
                         <x-base::darkmode :withText="true"/>
                     </li>
                     <li>
-                        <x-base::form method="POST" action="{{ route('logout') }}" x-data>
-                        <a href="" x-on:click.prevent="$root.submit();" class="block px-3 py-2 hover:bg-c-light last:rounded-b">
-                            <span class="hascha-sign-out-left"></span>
-                            {{ 'Logout' }}
-                        </a>
-                        </x-base::form>
+                        <x-base::logout text="Logout" class="block px-3 py-2 hover:bg-c-light last:rounded-b"/>
                     </li>
                 </ul>
             </div>
+            @elseif(Auth::check())
+            <x-base::logout text="Logout" class="text-sm text-secondary"/>
             @else
             <x-buttons::index
             text="Login"
