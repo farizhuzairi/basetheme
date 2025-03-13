@@ -18,7 +18,7 @@ if(! function_exists('defineError')){
         return [
             "message" => $message,
             "code" => $code,
-            "isReported" => true,
+            "isReported" => $isReported,
             "error" => [
                 "class" => $class,
                 "line" => $line,

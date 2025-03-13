@@ -63,7 +63,7 @@ abstract class ThemeModel
      */
     public function toHtml()
     {
-        return static::$view()->toHtml();
+        return (static::$view)()->toHtml();
     }
 
     /**

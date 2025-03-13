@@ -53,7 +53,7 @@ abstract class LiveForm extends Form
      * return type \Illuminate\Support\Collection or object.
      * @return void
      */
-    public function setForm(object|array $dataModel)
+    public function setForm(object|array $form)
     {
         if ($form instanceof Collection) {
             $this->form = (object) ($form->toArray());

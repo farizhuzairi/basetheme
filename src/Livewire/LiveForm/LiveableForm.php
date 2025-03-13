@@ -11,7 +11,13 @@ interface LiveableForm
      * return type \Illuminate\Support\Collection or object.
      * @return object
      */
-    public function setForm(object|array $dataModel);
+    public function setForm(object|array $data);
+
+    /**
+     * Set Value Form Attributes,
+     * @return void
+     */
+    public function setValues(array $attributes);
 
     /**
      * 'Override' for form processing:
