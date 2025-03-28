@@ -1,5 +1,6 @@
 {
     "name": "farizhuzairi/basetheme",
+    "version": "1.0.0",
     "type": "library",
     "description": "Menyusun data secara dinamis ke dalam setiap halaman website menggunakan Tema Dasar yang dapat dikostumisasi dan diperluas.",
     "keywords": [
