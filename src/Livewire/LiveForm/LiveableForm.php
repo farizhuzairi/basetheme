@@ -9,9 +9,9 @@ interface LiveableForm
     /**
      * Set Data Modelable or Other Data Models,
      * return type \Illuminate\Support\Collection or object.
-     * @return object
+     * @return void
      */
-    public function setForm(object|array $data);
+    public function setForm(array $data);
 
     /**
      * Set Value Form Attributes,

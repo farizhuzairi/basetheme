@@ -38,9 +38,9 @@ abstract class LiveForm extends Form
 
     /**
      * Form Object
-     * @var object|array
+     * @var array
      */
-    protected $form;
+    public $forms;
 
     /**
      * Form Object
@@ -53,18 +53,18 @@ abstract class LiveForm extends Form
      * return type \Illuminate\Support\Collection or object.
      * @return void
      */
-    public function setForm(object|array $form)
+    public function setForm(array $forms)
     {
-        if ($form instanceof Collection) {
-            $this->form = (object) ($form->toArray());
+        if ($forms instanceof Collection) {
+            $this->forms = $forms->toArray();
         }
 
-        elseif (is_object($form)) {
-            $this->form = $form;
+        elseif (is_array($forms)) {
+            $this->forms = $forms;
         }
 
         else {
-            $this->form = (object) $form;
+            $this->forms = [];
         }
     }
 
@@ -76,7 +76,7 @@ abstract class LiveForm extends Form
     {
         foreach($attributes as $key => $value) {
 
-            if(property_exists($this, $key)) {
+            if(property_exists($this, $key) && $value !== null) {
                 $this->{$key} = $value;
             }
 

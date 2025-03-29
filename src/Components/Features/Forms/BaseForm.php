@@ -114,11 +114,19 @@ class BaseForm extends BaseComponent implements Componentable, FeatureableCompon
      * @return static
      */
     public function formInput(
-        string $name,
+        array|string $name,
         Closure|string $type = 'text',
         ?Closure $form = null
     )
     {
+        $value = null;
+
+        if(is_array($name)) {
+            $_keyName = array_key_last($name);
+            $value = $name[$_keyName];
+            $name = $_keyName;
+        }
+
         $name = str_replace(" ", "", $name);
 
         if($type instanceof Closure) {
@@ -132,7 +140,7 @@ class BaseForm extends BaseComponent implements Componentable, FeatureableCompon
 
         $this->forms[$name] = array_merge(
             $this->dataFormAttribute(
-                'base::form.input',
+                $this->set_input_transform($type),
                 $name,
                 $type,
             ),
@@ -142,10 +150,26 @@ class BaseForm extends BaseComponent implements Componentable, FeatureableCompon
             ]
         );
 
-        $this->values[] = $name;
+        $this->values[$name] = $value;
 
         $this->reset();
         return $this;
+    }
+
+    /**
+     * filter transform input component
+     * @return string
+     */
+    protected function set_input_transform(string $type, string $base = "base::form."): string
+    {
+        if($type === 'hidden') {
+            $type = 'input-hidden';
+        }
+        else {
+            $type = 'input';
+        }
+
+        return $base . $type;
     }
 
     /**
@@ -154,7 +178,7 @@ class BaseForm extends BaseComponent implements Componentable, FeatureableCompon
      */
     public function submit(
         string $label,
-        string $name = null,
+        ?string $name = null,
         string $type = 'submit'
     )
     {
